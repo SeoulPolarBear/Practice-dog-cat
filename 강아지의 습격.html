@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강아지 습격 사건</title>
+    <!-- 메인 바랑 header 부분 기본틀 -->
+        <link rel="stylesheet" href="css\tag_bar.CSS">
+    <!-- 메인 부분 center -->
+    <style>
+         /* 각 영상 리스트 부분*/
+        .list{
+            height: 458px;
+            margin: 0%;
+            list-style-type: none;
+        }
+        /* 영상 title 부분*/
+        .video-title{
+        display: block;
+        background-color: brown;
+        width: 100%;
+        margin: 0px;
+        color: white;
+        text-align: center;
+        overflow: hidden;
+}
+        .list-a{
+            display: block;
+            float: left;
+            position: relative;
+            margin: 0%;
+            font-size: 42px;
+            height: 400px;
+            width: 100%;
+            
+        }
+       /* 영상 부분*/
+        iframe{
+        position: absolute;
+        margin: 1%;
+        width: 800px; height: 400px;
+        top: 0%;
+        left: 50%;
+        margin-left: -400px;
+        }
+        /* 영상 부분 반응형 웹*/
+        @media screen and (max-width: 767px) {
+    .list {height: 200px;}
+    .list-a{height: 150px}
+    iframe {width: 300px; height: 150px; margin-left: -150px;}
+}
+
+@media screen and (min-width: 767px) and (max-width: 959px) {
+    .list {height: 350px;}
+    .list-a{height: 300px}
+    iframe {width: 500px; height: 300px; margin-left: -250px;}
+}
+    </style>
+    
+</head>
+<!-- 메인 고정 바 -->
+<div class="inner_header_contents">
+    <div class="inner_header_mainpage">
+        <a href="댕댕이와 냥이.html" >
+        <img width="132" height="56" src="댕댕고양미니.png" alt="댕댕고양">
+    </a>
+    </div>
+        <ul>
+            <li><a href="댕댕.html">강아지</a></li>
+            <li><a href="냥냥.html">고양이</a></li>
+        </ul>
+        <div class="title"><h1>댕댕이와 냥이</h1></div>
+    </div>
+    <!-- center 부분 -->
+    <div class="center">
+    <header> 
+        <div class="header-body-img"><img id="header-body-inner-img" src="댕댕고양.png" alt="댕댕고양">
+                <div class="header-body-font"><h1>~댕댕이와 냥이~</h1></div>
+            </div>
+        </header>
+<section>
+                <div id="world-title"><h1>강아지가 개가 되는 순간 사건 사고</h1></div>
+               <ul>
+               <li class="list">
+                   <h1 class="video-title">로트와일러 습격 사건</h1>
+                <div class="list-a"><iframe src="https://www.youtube.com/embed/MXokhyCFhgI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></li>
+                
+                <li class="list">
+                    <h1 class="video-title">폭스 테리어 여아 습격 사건</h1>
+                 <div class="list-a"><iframe src="https://www.youtube.com/embed/gIhCBomrNA4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></li>
+                
+                 <li class="list">
+                    <h1 class="video-title">보스턴 테리어 습격 사건</h1>
+                 <div class="list-a"><iframe src="https://www.youtube.com/embed/sh2uwVm2730" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></li>
+                
+                 <li class="list">
+                    <h1 class="video-title">불도그 습격 사건</h1>
+                 <div class="list-a"><iframe src="https://www.youtube.com/embed/XnJD8ciLZS8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></li>
+                
+                    
+            </ul>
+            </section>
+<footer></footer>
+</div>
+</body>
+</html>

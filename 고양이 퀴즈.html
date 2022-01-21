@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz of Cat</title>
+    <!-- 메인 바랑 header 부분 기본틀 -->
+      <link rel="stylesheet" href="css\tag_bar.CSS">
+    <!-- 메인 부분 center -->
+    <style>
+       /*각 리스트*/
+        .list{
+            height: 229px;
+            margin: 1%;
+            border-bottom: 1px solid grey;
+            list-style-type: none;
+        }
+        .list-a{
+            display: block;
+            float: left;
+            position: relative;
+            margin: 0%;
+            font-size: 42px;
+            height: 229px;
+            width: 100%;
+        }
+        /*각 리스트 이름 및 설명*/
+        .list-a p{
+            line-height: 229px;
+            color: rgb(41, 35, 35);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .list-a p:hover{
+            text-decoration: underline;
+        }
+        .list-img{
+            margin-top: 12px;
+            display: block;
+            float: left;
+            
+        }
+    </style>
+    <!-- header와 section 부분 구분 짓는 bar 반응형 웹 구현 -->
+    <link rel="stylesheet" href="css\Responsive_Web.css">
+</head>
+<body>
+    <!-- 메인 고정 바 -->
+    <div class="inner_header_contents">
+        <div class="inner_header_mainpage">
+            <a href="댕댕이와 냥이.html" >
+            <img width="132" height="56" src="댕댕고양미니.png" alt="댕댕고양">
+        </a>
+        </div>
+            <ul>
+                <li><a href="댕댕.html">강아지</a></li>
+                <li><a href="냥냥.html">고양이</a></li>
+            </ul>
+            <div class="title"><h1>댕댕이와 냥이</h1></div>
+        </div>
+        <div class="center">
+        <header> 
+                <div class="header-body-img"><img  id="header-body-inner-img" src="댕댕고양.png" alt="댕댕고양">
+                    <div class="header-body-font"><h1>~댕댕이와 냥이~</h1></div>
+                </div>
+        </header>
+<div class="section">
+            <!-- section 난이도 구분해놓은 부분 -->
+                <div id="world-title"><h1>고양이 퀴즈!</h1></div>
+               <ul>
+               <li class="list"><a href="고양이 퀴즈_하.html">
+                <div class="list-a"><p>하(많이 쉽습니다.)</p></div>
+                <li class="list"><a href="고양이 퀴즈_중.html">
+                    <div class="list-a"><p>중(꽤 어려울 수도 있습니다.)</p></div></a></li>
+                <li class="list"><a href="고양이 퀴즈_상.html">
+                    <div class="list-a"><p>상(웹에 있는 정보들을 꼼꼼히 공부해 오세요.)</p></div></a></li>
+                </ul>   
+            </div>
+</div>
+</body>
+</html>

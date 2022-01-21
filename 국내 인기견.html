@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Most Popular Dog in 한국</title>
+    <!-- 메인 바랑 header 부분 기본틀 -->
+    <link rel="stylesheet" href="css\tag_bar.CSS">
+    <style>
+    /*nav 부분 메뉴 리스트*/
+        .nav-pull-list{
+            display: block;
+            overflow: hidden;
+            border: 2px grey;
+           
+        }
+        .nav-pull-menu-list{
+            display: block;
+        }.nav-pull-menu-item{
+            list-style-type: none;
+        }
+        .nav-pull-menu-item-title{
+            display: block;
+            float: left;
+            width: 266px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: white;
+        }
+        .nav-pull-menu-item-title>a{color:black;}
+        .nav-pull-menu-item-title:hover{
+            background-color: rgba(0,0,0,0.8);
+        }
+    /*랭크에 해당하는 사진 관련 class*/
+            .Lank{
+                text-align: center;
+                overflow: hidden;
+            }
+            /*랭크에 해당하는 title ex) 2위 class*/
+            .Lank-title{
+                text-align: center;
+                overflow: hidden;
+            }
+           /*각 강아지들 사진, 이름 및 별점 부여한 부분*/
+            .dog-TMI{
+                margin: 1%;
+                display: inline-block;
+                float: left;
+                width: 97%;
+                height: 100%;
+                overflow: hidden;
+            }
+            .dog-name{
+                margin: 1% ;
+                display: block;
+                float: left;
+                font-size: 24px;
+                width: 97%;
+                height: 100%;
+                overflow: hidden;
+            }
+            .dog-explain{
+                margin: 1% ;
+                display: block;
+                float: left;
+                font-size: 24px;
+                width: 97%;
+                height: 100%;
+                overflow: hidden;
+            }
+
+            .dog-picture{
+                margin-top: 2%;
+                width: 280px;
+                height: 50%;
+            }
+           
+    </style>
+    <!-- header와 section 부분 구분 짓는 bar 반응형 웹 구현 -->
+    <link rel="stylesheet" href="css\Responsive_Web.css">
+    <style>
+       .Lank-title-p{
+           color: white;
+           background-color: rgb(202, 30, 194);
+       }
+    </style>
+</head>
+<body>
+    <div class="inner_header_contents">
+        <div class="inner_header_mainpage">
+            <a href="댕댕이와 냥이.html" >
+            <img width="132" height="56" src="댕댕고양미니.png" alt="댕댕고양">
+        </a>
+        </div>
+            <ul>
+                <li><a href="댕댕.html">강아지</a></li>
+                <li><a href="냥냥.html">고양이</a></li>
+            </ul>
+            <div class="title"><h1>댕댕이와 냥이</h1></div>
+        </div>
+        <div class="center">
+        <header> 
+                <div class="header-body-img"><img  id="header-body-inner-img" src="댕댕고양.png" alt="댕댕고양">
+                    <div class="header-body-font"><h1>~댕댕이와 냥이~</h1></div>
+                </div>
+        </header>
+    <div class="main">
+        <section>
+            <div id="world-title"><h1>우리나라 인기 견종 순위</h1><h6>(어디까지나 재미로 봐주세요)</h6></div>
+            
+        <div class="contry">
+            <div class="Lank-title" id="Europe-title"><h1 class="Lank-title-p">1위</h1></div>
+            <div class="Lank" id="Europe">
+                <div class="dog-TMI"><img class="dog-picture" src="강아지/포메라니안.jpg" alt="포메라니안"><p class="dog-name"><b>포메라니안</b></p></div>
+                <div class="dog-TMI">  
+                    <p class="dog-explain"><b>귀여움 : </b>★★★★★</p>
+                    <p class="dog-explain"><b>성격도 : </b>★★★</p>
+                    <p class="dog-explain"><b>충성도 : </b>★★★</p>
+                    <p class="dog-explain"><b>털빠짐 : </b>★★★★</p>
+                    <p class="dog-explain"><b>지능도 : </b>★★★★</p>
+                </div>   
+            </div>
+            
+            <div class="Lank-title" id="Europe-title"><h1 class="Lank-title-p">2위</h1></div>
+            <div class="Lank" id="Europe">
+                <div class="dog-TMI"><img class="dog-picture" src="강아지/말티즈.jpg" alt="말티즈"><p class="dog-name"><b>말티즈</b></p></div>
+                <div class="dog-TMI">  
+                    <p class="dog-explain"><b>귀여움 : </b>★★★★★</p>
+                    <p class="dog-explain"><b>성격도 : </b>★★★★</p>
+                    <p class="dog-explain"><b>충성도 : </b>★★★★</p>
+                    <p class="dog-explain"><b>털빠짐 : </b>★</p>
+                    <p class="dog-explain"><b>지능도 : </b>★★</p>
+                </div>   
+            </div>
+            
+            <div class="Lank-title" id="Europe-title"><h1 class="Lank-title-p">3위</h1></div>
+            <div class="Lank" id="Europe">
+                <div class="dog-TMI"><img class="dog-picture" src="강아지/치와와.jpg" alt="치와와"><p class="dog-name"><b>치와와</b></p></div>
+                <div class="dog-TMI">  
+                    <p class="dog-explain"><b>귀여움 : </b>★★★★★</p>
+                    <p class="dog-explain"><b>성격도 : </b>★★</p>
+                    <p class="dog-explain"><b>충성도 : </b>★★</p>
+                    <p class="dog-explain"><b>털빠짐 : </b>★★</p>
+                    <p class="dog-explain"><b>지능도 : </b>★★</p>
+                </div>   
+            </div>
+
+            <div class="Lank-title" id="Europe-title"><h1 class="Lank-title-p">4위</h1></div>
+            <div class="Lank" id="Europe">
+                <div class="dog-TMI"><img class="dog-picture" src="강아지/비숑프리제.jpg" alt="비숑프리제"><p class="dog-name"><b>비숑 프리제</b></p></div>
+                <div class="dog-TMI">  
+                    <p class="dog-explain"><b>귀여움 : </b>★★★★</p>
+                    <p class="dog-explain"><b>성격도 : </b>★★★★★</p>
+                    <p class="dog-explain"><b>충성도 : </b>★★★★</p>
+                    <p class="dog-explain"><b>털빠짐 : </b>★</p>
+                    <p class="dog-explain"><b>지능도 : </b>★★★★</p>
+                </div>   
+            </div>
+
+            <div class="Lank-title" id="Europe-title"><h1 class="Lank-title-p">5위</h1></div>
+            <div class="Lank" id="Europe">
+                <div class="dog-TMI"><img class="dog-picture" src="강아지/푸들.jpg" alt="푸들"><p class="dog-name"><b>푸들</b></p></div>
+                <div class="dog-TMI">  
+                    <p class="dog-explain"><b>귀여움 : </b>★★★★</p>
+                    <p class="dog-explain"><b>성격도 : </b>★★★★</p>
+                    <p class="dog-explain"><b>충성도 : </b>★★★★★</p>
+                    <p class="dog-explain"><b>털빠짐 : </b>★</p>
+                    <p class="dog-explain"><b>지능도 : </b>★★★★★</p>
+                </div>   
+            </div>
+
+            <div class="Lank-title" id="Europe-title"><h1 class="Lank-title-p">6위</h1></div>
+            <div class="Lank" id="Europe">
+                <div class="dog-TMI"><img class="dog-picture" src="강아지/요크셔_테리어.jpg" alt="요크셔_테리어"><p class="dog-name"><b>요크셔 테리어</b></p></div>
+                <div class="dog-TMI">  
+                    <p class="dog-explain"><b>귀여움 : </b>★★★★★</p>
+                    <p class="dog-explain"><b>성격도 : </b>★★★★</p>
+                    <p class="dog-explain"><b>충성도 : </b>★★★★★</p>
+                    <p class="dog-explain"><b>털빠짐 : </b>★</p>
+                    <p class="dog-explain"><b>지능도 : </b>★★★★</p>
+                </div>   
+            </div>
+
+            <div class="Lank-title" id="Europe-title"><h1 class="Lank-title-p">7위</h1></div>
+            <div class="Lank" id="Europe">
+                <div class="dog-TMI"><img class="dog-picture" src="강아지/코커_스파니엘.jpg" alt="코커_스파니엘"><p class="dog-name"><b>코커 스파니엘</b></p></div>
+                <div class="dog-TMI">  
+                    <p class="dog-explain"><b>귀여움 : </b>★★★★</p>
+                    <p class="dog-explain"><b>성격도 : </b>★★★</p>
+                    <p class="dog-explain"><b>충성도 : </b>★★★★</p>
+                    <p class="dog-explain"><b>털빠짐 : </b>★★★★</p>
+                    <p class="dog-explain"><b>지능도 : </b>★★★★</p>
+                </div>   
+            </div>
+
+            <div class="Lank-title" id="Europe-title"><h1 class="Lank-title-p">8위</h1></div>
+            <div class="Lank" id="Europe">
+                <div class="dog-TMI"><img class="dog-picture" src="강아지/진돗개.jpg" alt="진돗개"><p class="dog-name"><b>진돗개</b></p></div>
+                <div class="dog-TMI">  
+                    <p class="dog-explain"><b>귀여움 : </b>★★★★</p>
+                    <p class="dog-explain"><b>성격도 : </b>★★★</p>
+                    <p class="dog-explain"><b>충성도 : </b>★★★★★</p>
+                    <p class="dog-explain"><b>털빠짐 : </b>★★★</p>
+                    <p class="dog-explain"><b>지능도 : </b>★★★★</p>
+                </div>   
+            </div>
+
+            <div class="Lank-title" id="Europe-title"><h1 class="Lank-title-p">9위</h1></div>
+            <div class="Lank" id="Europe">
+                <div class="dog-TMI"><img class="dog-picture" src="강아지/골든_리트리버.jpg" alt="골든_리트리버"><p class="dog-name"><b>골든 리트리버</b></p></div>
+                <div class="dog-TMI">  
+                    <p class="dog-explain"><b>귀여움 : </b>★★★★</p>
+                    <p class="dog-explain"><b>성격도 : </b>★★★★★</p>
+                    <p class="dog-explain"><b>충성도 : </b>★★★★</p>
+                    <p class="dog-explain"><b>털빠짐 : </b>★★★★</p>
+                    <p class="dog-explain"><b>지능도 : </b>★★★★★</p>
+                </div>   
+            </div>
+
+            <div class="Lank-title" id="Europe-title"><h1 class="Lank-title-p">10위</h1></div>
+            <div class="Lank" id="Europe">
+                <div class="dog-TMI"><img class="dog-picture" src="강아지/래브라도_리트리버.jpg" alt="래브라도_리트리버"><p class="dog-name"><b>래브라도 리트리버</b></p></div>
+                <div class="dog-TMI">  
+                <p class="dog-explain"><b>귀여움 : </b>★★★</p>
+                <p class="dog-explain"><b>성격도 : </b>★★★★</p>
+                <p class="dog-explain"><b>충성도 : </b>★★★★</p>
+                <p class="dog-explain"><b>털빠짐 : </b>★★★</p>
+                <p class="dog-explain"><b>지능도 : </b>★★★★★</p>
+                </div>   
+            </div>
+
+        </div>
+</section>
+            </div>
+        </div>
+</div>
+<footer><p>HTML5 Programming for term project topic is about dog and cat</p></footer>
+</div>
+</body>
+</html>  

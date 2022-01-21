@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비슷한 고양이</title>
+    <!-- 메인 바랑 header 부분 기본틀 -->
+    <link rel="stylesheet" href="css\tag_bar.CSS">
+    <style>
+        /*nav 부분 메뉴 리스트*/
+        .nav-pull-list{
+            display: block;
+            overflow: hidden;
+            border: 2px grey;
+           
+        }
+        .nav-pull-menu-list{
+            display: block;
+        }.nav-pull-menu-item{
+            list-style-type: none;
+        }
+        .nav-pull-menu-item-title{
+            display: block;
+            float: left;
+            width: 266px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: white;
+        }
+        .nav-pull-menu-item-title>a{color:black;}
+        .nav-pull-menu-item-title:hover{
+            background-color: rgba(0,0,0,0.8);
+        }
+    /*랭크에 해당하는 사진 관련 class*/
+            .Lank{
+                text-align: center;
+                overflow: hidden;
+            }
+
+            /*랭크에 해당하는 title ex) 샴의 자식들 class*/
+            .Lank-title{
+                text-align: center;
+                overflow: hidden;
+            }
+            /*각 고양이들 사진 및 이름 부분*/
+            .cat-TMI{
+                margin: 1%;
+                display: inline-block;
+                float: left;
+                width: 97%;
+                height: 100%;
+                overflow-x: scroll;
+            }
+
+            .cat-about{
+                margin: 1%;
+                display: inline-block;
+                float: left;
+                width: 97%;
+                height: 100%;
+                overflow: hidden;
+            }
+    /*각 고양이들 구분 할 수 있게 나눈 부분*/
+            .cat-compare{
+                float: left;
+                width: 420px;
+               
+            }
+        /*각 고양이들 이름 구분 할 수 있게 나눈 compare 안의 부분*/
+            .cat-name{
+                margin: 1% ;
+                display: inline-block;
+                float: left;
+                font-size: 30px;
+                width: 408px;
+                text-align: center;
+                overflow: hidden;
+            }
+            .cat-explain{
+                margin: 1% ;
+                display: block;
+                float: left;
+                border: 6px solid rgb(129, 215, 255);
+                font-size: 24px;
+                width: 95%;
+                height: 100%;
+                overflow: hidden;
+            }
+            .cat-picture{
+                margin-top: 2%;
+                width: 360px;
+                height: 240px;
+            }
+           
+    </style>
+    <!-- header와 section 부분 구분 짓는 bar 반응형 웹 구현 -->
+    <link rel="stylesheet" href="css\Responsive_Web.css">
+    <style>
+       .Lank-title-p{
+           color: white;
+           background-color: rgb(202, 30, 194);
+       }
+    </style>
+   
+</head>
+<body>
+    <!-- 메인 고정 바 -->
+    <div class="inner_header_contents">
+        <div class="inner_header_mainpage">
+            <a href="댕댕이와 냥이.html" >
+            <img width="132" height="56" src="댕댕고양미니.png" alt="댕댕고양">
+        </a>
+        </div>
+            <ul>
+                <li><a href="댕댕.html">강아지</a></li>
+                <li><a href="냥냥.html">고양이</a></li>
+            </ul>
+            <div class="title"><h1>댕댕이와 냥이</h1></div>
+        </div>
+        <!-- center 부분 -->
+        <div class="center">
+        <header> 
+                <div class="header-body-img"><img  id="header-body-inner-img" src="댕댕고양.png" alt="댕댕고양">
+                    <div class="header-body-font"><h1>~댕댕이와 냥이~</h1></div>
+                </div>
+        </header>
+        <!-- section 부분 -->
+    <div class="main">
+        <section>
+            <div id="world-title"><h1>비슷한 고양이들 비교하기</h1><h6>(한번 비교해 보세요)</h6></div>
+            
+        <div class="contry">
+            <div class="Lank-title"><h1 class="Lank-title-p">회색계열 고양이</h1></div>
+            <div class="Lank">
+                <div class="cat-TMI">
+                    <!-- 각 고양이들 이름 구분 할 수 있게 나눈 compare 안의 부분 -->
+                    <div class="cat-compare"><img class="cat-picture" src="고양이/러시안_블루.jpg" alt="러시안_블루"><p class="cat-name"><b>러시안 블루</b></p></div>
+                    <div class="cat-compare"><img class="cat-picture" src="고양이/코랫.jpg" alt="코랫"><p class="cat-name"><b>코랫</b></p></div>
+                    <div class="cat-compare"><img class="cat-picture" src="고양이/샤트룩스.jpg" alt="샤트룩스"><p class="cat-name"><b>샤트룩스</b></p></div>
+                    <div class="cat-compare"><img class="cat-picture" src="고양이/브리티시_쇼트헤어.jpg" alt="브리티시_쇼트헤어"><p class="cat-name"><b>브리티시 쇼트헤어</b></p></div>
+                    </div>
+                <div class="cat-about">  
+                    <p class="cat-explain">전부 탄생한 국가가 다르다. 보시는 것과 같이 왼쪽 부터 비교적 슬림한 고양이임을 알 수 있다. 오른쪽 종들은 대형묘로 분류 되고 뚱냥이가 될 가능성이 높다. 그대신 근육이 더 발달 되었다. 눈색깔도 다르다는 걸 알 수 있다.</p>
+                </div>   
+            </div>
+
+            <div class="contry">
+                <div class="Lank-title"><h1 class="Lank-title-p">샴의 자식들</h1></div>
+                <div class="Lank">
+                    <div class="cat-TMI">
+                        <!-- 각 고양이들 이름 구분 할 수 있게 나눈 compare 안의 부분 -->
+                        <div class="cat-compare"><img class="cat-picture" src="고양이/샴.jpg" alt="샴"><p class="cat-name"><b>샴</b></p></div>
+                        <div class="cat-compare"><img class="cat-picture" src="고양이/버만.jpg" alt="버만"><p class="cat-name"><b>버만</b></p></div>
+                        <div class="cat-compare"><img class="cat-picture" src="고양이/통키니즈.jpg" alt="통키니즈"><p class="cat-name"><b>통키니즈</b></p></div>
+                        <div class="cat-compare"><img class="cat-picture" src="고양이/버미즈_고양이.jpg" alt="버미즈 고양이"><p class="cat-name"><b>버미즈 고양이</b></p></div>
+                        <div class="cat-compare"><img class="cat-picture" src="고양이/오리엔탈_쇼트헤어.jpg" alt="오리엔탈_쇼트헤어"><p class="cat-name"><b>오리엔탈 쇼트헤어</b></p></div>
+                        <div class="cat-compare"><img class="cat-picture" src="고양이/오시캣.jpg" alt="오시캣"><p class="cat-name"><b>오시캣</b></p></div>
+                        <div class="cat-compare"><img class="cat-picture" src="고양이/히말라얀.jpg" alt="히말라얀"><p class="cat-name"><b>히말라얀</b></p></div>
+                        <div class="cat-compare"><img class="cat-picture" src="고양이/발리니즈.jpg" alt="발리니즈"><p class="cat-name"><b>발리니즈</b></p></div>
+                        </div>
+                    <div class="cat-about">  
+                        <p class="cat-explain">오리엔탈 쇼트헤어, 오시캣과 통키니즈를 제외한 모든 종이 기본적으로 샴의 특징인 얼굴에 큰 검은색 점같은 무늬가 뚜렷하게있다. 오리엔탈 쇼트헤어는 샴의 유전자를 많이 받지 않았기 때문이다. 오시캣은 아비시니안을 많의 유전자를 많이 받았기 때문이다.통키니즈는 버미즈와 샴을 교배 했기 때문에 특징이 옅어졌다. </p>
+                    </div>   
+                </div>
+
+                <div class="contry">
+                    <div class="Lank-title"><h1 class="Lank-title-p">터키시 고양이의 차이점</h1></div>
+                    <div class="Lank">
+                        <div class="cat-TMI">
+                            <div class="cat-compare"><img class="cat-picture" src="고양이/터키시_반.jpg" alt="터키시_반.jpg"><p class="cat-name"><b>터키시 반</b></p></div>
+                            <div class="cat-compare"><img class="cat-picture" src="고양이/터키시_앙고라.jpg" alt="터키시_앙고라.jpg"><p class="cat-name"><b>터키시 앙고라</b></p></div>
+                            </div>
+                        <div class="cat-about">  
+                            <p class="cat-explain">둘의 가장 큰 특징은 반(밴) 무늬이다. 머리와 꼬리를 보면 그 쪽에만 무늬가 있는걸 알 수 있습니다. 즉, 머리와 꼬리 이외에는 모두 흰색인 독특한 피모 패턴입니다.</p>
+                        </div>   
+                    </div>
+
+                    <div class="contry">
+                        <div class="Lank-title"><h1 class="Lank-title-p">터키시 고양이의 차이점</h1></div>
+                        <div class="Lank">
+                            <div class="cat-TMI">
+                                <!-- 각 고양이들 이름 구분 할 수 있게 나눈 compare 안의 부분 -->
+                                <div class="cat-compare"><img class="cat-picture" src="고양이/시베리아_숲.jpg" alt="시베리아_숲"><p class="cat-name"><b>시베리아 숲</b></p></div>
+                                <div class="cat-compare"><img class="cat-picture" src="고양이/노르웨이_숲.jpg" alt="노르웨이_숲"><p class="cat-name"><b>노르웨이 숲</b></p></div>
+                                <div class="cat-compare"><img class="cat-picture" src="고양이/메인쿤.jpg" alt="메인쿤"><p class="cat-name"><b>메인쿤</b></p></div>
+                                </div>
+                            <div class="cat-about">  
+                                <p class="cat-explain">전부 자연발생 종으로 숲에서 발견되서 그런가 비슷한 부분이 많아 헷갈리시는 분들이 많다.</p>
+                            </div>   
+                        </div>
+        </div>
+</section>
+            </div>
+        </div>
+</div>
+<footer><p>HTML5 Programming for term project topic is about cat and cat</p></footer>
+</div>
+</body>
+</html>
+    
+</body>
+</html>

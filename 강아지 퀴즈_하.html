@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz of Dog</title>
+    <!-- 메인 바랑 header 부분 기본틀 -->
+    <link rel="stylesheet" href="css\tag_bar.CSS">
+    <style>
+        /*nav 부분 메뉴 리스트*/
+        .nav-pull-list{
+            display: block;
+            overflow: hidden;
+            border: 2px grey;
+           
+        }
+        .nav-pull-menu-list{
+            display: block;
+        }.nav-pull-menu-item{
+            list-style-type: none;
+        }
+        .nav-pull-menu-item-title{
+            display: block;
+            float: left;
+            width: 266px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: white;
+        }
+        .nav-pull-menu-item-title>a{color:black;}
+        .nav-pull-menu-item-title:hover{
+            background-color: rgba(0,0,0,0.8);
+        }
+</style>
+<style>
+    /*오른쪽 고정 메뉴 바*/
+        .right{
+            background-color: white;
+            float: right;
+            position: fixed;
+            width: 13%;
+            height: 220px;
+            right: 0px;
+            top: 70px;
+            margin-top: 10px;
+            font-size: 80%;
+            overflow-x: scroll;
+        } 
+       .right-pull-menu{
+           position: absolute;
+           right: 50%;
+            top: 0px;
+            margin-right: -133px;
+       }
+       .continent-title-p{
+           background-color: yellow;
+       }
+    </style>
+    <!-- 퀴즈 출제하는 부분 -->
+    <script src="js\question_dog_bottom.js"></script>
+</head>
+<body>
+    <!-- 메인 고정 바 -->
+    <div class="inner_header_contents">
+        <div class="inner_header_mainpage">
+            <a href="댕댕이와 냥이.html" >
+            <img width="132" height="56" src="댕댕고양미니.png" alt="댕댕고양">
+        </a>
+        </div>
+            <ul>
+                <li><a href="댕댕.html">강아지</a></li>
+                <li><a href="냥냥.html">고양이</a></li>
+            </ul>
+            <div class="title"><h1>댕댕이와 냥이</h1></div>
+        </div>
+        <!-- center 부분 -->
+        <div class="center">
+        <header> 
+                <div class="header-body-img"><img  id="header-body-inner-img" src="댕댕고양.png" alt="댕댕고양">
+                    <div class="header-body-font"><h1>~댕댕이와 냥이~</h1></div>
+                </div>
+        </header>
+        <!-- nav 메뉴 바 -->
+        <nav class="nav-pull">
+            <div class="nav-pull-list">
+                <ul class="nav-pull-menu">
+                    <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="강아지 퀴즈.html">강아지 퀴즈</a></span></li>
+                    <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="강아지 퀴즈_하.html">하</a></span></li>
+                    <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="강아지 퀴즈_중.html">중</a></span></li>
+                    <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="강아지 퀴즈_상.html">상</a></span></li>
+                </ul>
+            </div>
+        </nav>
+    <div class="main">
+        <section>
+            <!-- 결과 확인하기 버튼 부분 -->
+            <input id="result-botton" type="button" value="결과 확인하기" onclick="result()">
+        </section>
+</div>
+<footer><p>HTML5 Programming for term project topic is about dog and cat</p></footer>
+</div>
+<!-- 오른쪽 고정 메뉴 바 -->
+<div class="right">
+    <ul class="right-pull-menu">
+        <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="강아지 퀴즈.html">강아지 퀴즈</a></span></li>
+        <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="강아지 퀴즈_하.html">하</a></span></li>
+        <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="강아지 퀴즈_중.html">중</a></span></li>
+        <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="강아지 퀴즈_상.html">상</a></span></li>
+    </ul>
+</div>   
+</body>
+</html>
+    
+</body>
+</html>
+    

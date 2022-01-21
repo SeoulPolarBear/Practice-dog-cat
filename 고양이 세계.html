@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World of cat</title>
+    <!-- 메인 바랑 header 부분 기본틀 -->
+    <link rel="stylesheet" href="css\tag_bar.CSS">
+    <style>
+        /*nav 부분 메뉴 리스트*/
+        .nav-pull-list{
+            display: block;
+            overflow: hidden;
+            border: 2px grey;
+           
+        }
+        .nav-pull-menu-list{
+            display: block;
+        }.nav-pull-menu-item{
+            list-style-type: none;
+        }
+        .nav-pull-menu-item-title{
+            display: block;
+            float: left;
+            width: 266px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: white;
+        }
+        .nav-pull-menu-item-title>a{color:black;}
+        .nav-pull-menu-item-title:hover{
+            background-color: rgba(0,0,0,0.8);
+        }
+    /*지도 부분*/
+        .world{
+            display: block;
+            width: 100%;
+            position: relative;
+        }
+ 
+        #world-map{
+            margin: 0px 3px;
+            width: 100%;
+            overflow-x: scroll; 
+        }
+        #world-map-img{
+            width: 1327px;
+        }
+        /*지도 반응형 웹 구현*/
+        @media screen and (max-width: 767px) {
+            #world-map-img{width: 500px;}
+        }
+        @media screen and (min-width: 767px) and (max-width: 959px) {
+            #world-map-img{width: 900px;}
+        }
+        /* 대륙별 구별*/
+            .continent{
+                text-align: center;
+            }
+            /*각 나라별 국기*/
+            .country-flag{
+                width: 120px;
+                height: 60px;
+            }
+             /*각 나라별 국견종 설명*/
+            .cat-TMI{
+                margin: 0.5% 0.5% 0% 0.5%;
+                display: inline-block;
+                float: left;
+                border: 1px solid black;
+                width: 200px;
+                height: 360px;
+                overflow: hidden;
+            }
+             /*각 나라별 국견종 설명란 안에 있는 고양이 img*/
+            .cat-picture{
+                margin-top: 2%;
+                width: 180px;
+                height: 90px;
+            }
+            .cat-explain{
+                border: 2px black;
+            }
+            /*세계지도 설명 부분 반응형 웹 구현*/
+    </style><link rel="stylesheet" href="css\Responsive_Web.css">
+    <style>
+        /*오른쪽 고정 메뉴 바*/
+        .right{
+            background-color: white;
+            float: right;
+            position: fixed;
+            width: 13%;
+            height: 220px;
+            right: 0px;
+            top: 70px;
+            margin-top: 10px;
+            font-size: 80%;
+            overflow-x: scroll;
+        } 
+       .right-pull-menu{
+           position: absolute;
+           right: 50%;
+            top: 0px;
+            margin-right: -133px;
+       }
+       .continent-title-p{
+           background-color: yellow;
+       }
+    </style>
+</head>
+<body>
+    <!-- 메인 고정 바 -->
+    <div class="inner_header_contents">
+        <div class="inner_header_mainpage">
+            <a href="댕댕이와 냥이.html" >
+            <img width="132" height="56" src="댕댕고양미니.png" alt="댕댕고양">
+        </a>
+        </div>
+            <ul>
+                <li><a href="댕댕.html">강아지</a></li>
+                <li><a href="냥냥.html">고양이</a></li>
+            </ul>
+            <div class="title"><h1>댕댕이와 냥이</h1></div>
+        </div>
+        <!-- center 부분 -->
+        <div class="center">
+        <header> 
+                <div class="header-body-img"><img  id="header-body-inner-img" src="댕댕고양.png" alt="댕댕고양">
+                    <div class="header-body-font"><h1>~댕댕이와 냥이~</h1></div>
+                </div>
+                <!-- header 부분 -->
+        </header>
+        <!-- 메뉴 바 nav 부분 -->
+        <nav class="nav-pull">
+            <div class="nav-pull-list">
+                <ul class="nav-pull-menu">
+                    
+                    <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="#America">아메리카</a></span></li>
+                    <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="#Asia">아시아</a></span></li>
+                    <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="#Africa">아프리카</a></span></li>
+                    <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="#Europe">유럽</a></span></li>
+                    <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="#etc">기타</a></span></li>
+                    
+                </ul>
+            </div>
+        </nav>
+    <div class="main">
+        <!-- section 부분 table 만든 부분 -->
+        <section>
+            <div class="world">
+            <div id="world-title"><h1>세계 지도</h1></div>
+            <div id="world-map"><img id="world-map-img" src="세계지도1.jpg" alt="세계지도"></div>
+        </div>
+        <div class="contry">
+            <div class="continent" id="Europe">
+                <div class="continent-title" id="Europe-title"><h1 class="continent-title-p">Europe</h1>
+                <table border="1" id="Europe-cat">
+                   
+                <tr><th colspan="2">프랑스</th></tr>
+                    <tr>
+                        <td>
+                        <img class="country-flag" src="국기/프랑스.png" alt="프랑스">
+                    </td>
+                    <td>
+                        <div class="cat-TMI"><img class="cat-picture" src="고양이/버만.jpg" alt="버만"><p class="cat-explain"><b>버만</b><br>호기심이 많아 놀기를 좋아하지만 침착한 성격도 가지고 있기 때문에 심한 장난이나 공격을 하지 않아 사람들에게 인기 있는 품종이다. 낯을 가리는 성격 때문에 주인 외에는 친해지기 어렵다. 2차 세계대전 중 멸종위기에 처했으나 프랑스에 남아 있던 한 쌍에 의해 간신히 종을 유지할 수 있었다.</p></div>
+                        <div class="cat-TMI"><img class="cat-picture" src="고양이/샤트룩스.jpg" alt="샤트룩스"><p class="cat-explain"><b>샤트룩스</b><br>단모종으로 머리가 크고 둥글넓적하며 볼이 통통하다. 솜털을 연상시키는 부드럽고 짧은 털이 촘촘하게 나 있으며 청회색의 털 끝부분은 은빛은 살짝 띠고 있다. 몸집에 비하여 발이 작아서 걸음걸이가 독특하며 다리는 비교적 짧다. 성격은 얌전하고 별로 울지 않는 편이며 영리하며 충성심이 깊다.</p></div>
+                        </td>
+                </tr>
+                    
+                <tr><th colspan="2">UK</th></tr>
+                    <tr>
+                        <td>
+                        <img class="country-flag" src="국기/UK.png" alt="UK">
+                    </td>
+                    <td>
+                        <div class="cat-TMI"><img class="cat-picture" src="고양이/브리티시_쇼트헤어.jpg" alt="브리티시_쇼트헤어"><p class="cat-explain"><b>브리티시_쇼트헤어</b><br>조심스럽고 순한 성격으로, 조용하며 인내심이 강하다. 개와 서로 평화롭게 지낸다. 외형상으로 얼굴이 다른 종들보다 빵빵하고 둥근 것이 특징이다. 근육질이며 뼈도 튼튼하다. 잘 움직이지를 않아 쉽게 살이 찐다. 대형묘의 공통적인 질병인 비대성 심근증(HCM)에 주의해야 한다.</p></div>
+                        <div class="cat-TMI"><img class="cat-picture" src="고양이/소말리.jpg" alt="소말리"><p class="cat-explain"><b>소말리</b><br>원종은 아비시니안이다. 머리는 완만한 V 자형. 긴 체모와 여우 같은 주렁주렁 한 꼬리가 특징으로 체격은 아비시니안과 마찬가지로 근육질이다. 눈은 크고, 아몬드 모이며 울음 소리가 매우 아름답고 방울처럼 매우 맑은 소리가 난다</p></div>
+                        <div class="cat-TMI"><img class="cat-picture" src="고양이/데본_렉스.jpg" alt="데본_렉스"><p class="cat-explain"><b>데본 렉스</b><br>1960년대 영국의 데본셔지방의 폐 주석광산 근처에서 발견된 돌연변이 새끼 고양이에서 시작. 여러 렉스종과 교배를 거듭하여 현재의 기준이 확립되었다. 호기심이 왕성하고, 기쁘면 꼬리를 흔든다고 할 만큼 표정이 풍부하다. 컬된 피모와 성격 때문에 '푸들캣'이라는 별명도 있다. 털빠짐은 적다.</p></div>
+                        <div class="cat-TMI"><img class="cat-picture" src="고양이/스코티시_폴드.jpg" alt="스코티시_폴드"><p class="cat-explain"><b>스코티시 폴드</b><br>땅딸막한 외모가 귀엽다고 성격은 좋다. 이런 이유로 계속 브리딩되고 있는 인기 품종 중 하나이다. 스코틀랜드 출신으로 귀가 접혀있다. 인위적인 근친교배의 결과 골연골 이형성증 유전병을 타고나는 개체가 많아 악명높은 품종이다. 영국협회에서는 품종등록을 거부. 너무 불쌍하다...</p></div>         
+                        <div class="cat-TMI"><img class="cat-picture" src="고양이/히말라얀.jpg" alt="히말라얀"><p class="cat-explain"><b>히말라얀</b><br>1950년대 페르시안과 샴의 인공교배로 탄생. 털빛이나 눈빛은 샴과, 체형은 페르시안과 닮았다. 1930년경부터 미국과 영국에서 품종이 개량되기 시작했다. 온순하여 사람을 잘 따르며, 울음소리가 작다. 몸통은 짧지만 두껍고 두꺼운 다리 그리고 짧고 굵은 목을 가지고 있다. 꼬리는 짧고 귀는 작다.</p></div>         
+                    </td>
+                </tr>
+                    
+                <tr><th colspan="2">러시아</th></tr>
+                    <tr>
+                        <td>
+                        <img class="country-flag" src="국기/러시아.png" alt="러시아">
+                    </td>
+                    <td>
+                        <div class="cat-TMI"><img class="cat-picture" src="고양이/시베리아_숲.jpg" alt="시베리아_숲"><p class="cat-explain"><b>시베리아 숲</b><br>자연발생한 품종으로 무늬가 매우 다양하고, 지능이 높다. 유전병이 없고 체력이 매우 뛰어나고, 골격이 크고 단단하며, 온몸이 근육질이다. 털이 3중모(triple coat)로 매우 풍성하다. 예로부터 쥐를 잡으려고 키워왔던 고양이로 사냥에 뛰어나고 매우 민첩하다.</p></div>
+                        <div class="cat-TMI"><img class="cat-picture" src="고양이/러시안_블루.jpg" alt="러시안_블루"><p class="cat-explain"><b>러시안 블루</b><br>러시아의 아르한겔스크 제도에서 유래해 영국의 종 개량을 통해 만들어진 종. 러시아 황실, 영국의 빅토리아 여왕이 키운 고양이의 후손이라고도 한다.낯을 심하게 가리는 편으로 가장 친한 가족 외엔 잘 놀려 하지 않고 애정이 깊어서 혼자 놔두기 애처롭게 느껴진다.</p></div>    
+                    </td>
+                </tr>
+                    
+                <tr><th colspan="2">노르웨이</th></tr>
+                    <tr>
+                        <td>
+                        <img class="country-flag" src="국기/노르웨이.png" alt="노르웨이">
+                    </td>
+                    <td>
+                        <div class="cat-TMI"><img class="cat-picture" src="고양이/노르웨이_숲.jpg" alt="노르웨이_숲"><p class="cat-explain"><b>노르웨이 숲</b><br> 노르웨이의 숲에서 자연발생했고 1970년대 말 순종 고양이로 인정 받았다. 자연발생한 품종인 만큼 무늬는 코리안 숏헤어와 유사하며 지능이 높고 튼튼하다. 장모종임에도 불구하고 털이 다른 종보다 적게 빠진다. 다른 장모종 고양이에 비하면 적게 빠진다는 거지 빠질 만큼은 빠진다.</p></div>
+                    </td>
+                    </tr>
+
+                    <tr><th colspan="2">맨섬</th></tr>
+                    <tr>
+                        <td>
+                        <img class="country-flag" src="국기/맨섬.png" alt="맨섬">
+                    </td>
+                    <td>
+                        <div class="cat-TMI"><img class="cat-picture" src="고양이/맹크스.jpg" alt="맹크스"><p class="cat-explain"><b>맹크스</b><br>사냥에 매우 능해서 어린 고양이 시절에도 자신과 비슷하거나 큰 먹이를 사냥할 줄 안다. 농장에서는 쥐 박멸을 위해 이 고양이를 이용하기도 한다. 눈이 오지 않는 따뜻한 기후를 선호. 특징은 꼬리가 매우 짧거나 없다는 것이다. 앞다리보다 뒷다리가 훨씬 길고 귀가 다른 종의 고양이보다 작은 편이다.</p></div>
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="continent" id="Asia">
+            <div class="continent-title" id="Europe-title"><h1 class="continent-title-p">Asia</h1>
+            <table border="1" id="Asia-cat">
+                <tr><th colspan="2">한국</th></tr>
+                <tr><td><img class="country-flag" src="국기/한국.png" alt="한국"></td>
+                <td>
+                    <div class="cat-TMI"><img class="cat-picture" src="고양이밈1.jpg" alt="코리아_쇼트헤어"><p class="cat-explain"><b>코리아 쇼트헤어</b><br>토착 고양이들은 품종에 관한 관리, 개량, 분류 등을 당한 적이 없어서 공식적인 품종이 없다. 성격이 개체별로 크게 달라서 사람을 엄청나게 경계하는 개체도 있고, 사람에게 계속 좋다고 매달리는 개체도 있으며, 그냥 흔히 이야기하는 고양이같은 성격의 개체도 있다. 색깔도 천차만별이다.</p></div>
+                    </td>
+                </tr>
+
+                <tr><th colspan="2">일본</th></tr>
+                <tr><td><img class="country-flag" src="국기/일본.png" alt="일본"></td>
+                <td>
+                    <div class="cat-TMI"><img class="cat-picture" src="고양이/재패니즈_밥테일.jpg" alt="재패니즈_밥테일"><p class="cat-explain"><b>재패니즈 밥테일</b><br>고토쿠지 사원과 니코 사원에는 이 특수한 짧은꼬리 고양이에 대한 일본인들의 사랑을 묘사하는 고풍의 일본식 목조 작품 및 그림들이 전시되어 있다. 재패니즈 밥테일은 인위적으로 만들어진 품종이 아닌 자연종으로 알려져 있다. 활동적이고 매우 영리하며 사람들과 함께 노는 것을 좋아한다. </p></div>
+                    </td>
+                </tr>
+
+                <tr><th colspan="2">싱가폴</th></tr>
+                <tr><td><img class="country-flag" src="국기/싱가폴.png" alt="싱가폴"></td>
+                <td>
+                    <div class="cat-TMI"><img class="cat-picture" src="고양이/싱가푸라.jpg" alt="싱가푸라"><p class="cat-explain"><b>싱가푸라</b><br>세계에서 가장 작은 고양이러 가장 큰 특징은 이마에 있는 아구티 태비( M자 무늬 ) 표시이다. 1970년대 싱가포르에서 들여와 "드레인 캣"이라는 이름으로 알려졌다. 조용하고 젊잖으며 똑똑하고 다루기 쉬워 훈련이 가능합니다. 호기심 많고 장난을 좋아하며 주인에 대한 애정이 많다.</p></div>
+                    </td>
+                </tr>
+
+                <tr><th colspan="2">인도</th></tr>
+                <tr><td><img class="country-flag" src="국기/인도.png" alt="인도"></td>
+                <td>
+                    <div class="cat-TMI"><img class="cat-picture" src="고양이/봄베이.jpg" alt="봄베이"><p class="cat-explain"><b>봄베이</b><br>맞다. 이 짤의 주인공이다. 뭄바이 출신으로 단모종 고양이 주둥이가 짧은 편이며, 일반적인 올블랙 코숏은 속털이 희거나 흰 털이 섞인 경우가 많은데 봄베이 고양이는 전신은 물론 속털까지 모두 검다. 성격이 친화적이고 조용하여 실내, 아파트에서도 잘 적응한다고 알려져 있다.</p></div>
+                    <div class="cat-TMI"><img class="cat-picture" src="고양이/히말라얀.jpg" alt="히말라얀"><p class="cat-explain"><b>히말라얀</b><br>1950년대 페르시안과 샴의 인공교배로 탄생. 털빛이나 눈빛은 샴과, 체형은 페르시안과 닮았다. 1930년경부터 미국과 영국에서 품종이 개량되기 시작했다. 온순하여 사람을 잘 따르며, 울음소리가 작다. 몸통은 짧지만 두껍고 두꺼운 다리 그리고 짧고 굵은 목을 가지고 있다. 꼬리는 짧고 귀는 작다.</p></div>
+                    </td>
+                </tr>
+
+                <tr><th colspan="2">태국</th></tr>
+                <tr><td><img class="country-flag" src="국기/태국.png" alt="태국"></td>
+                <td>
+                    <div class="cat-TMI"><img class="cat-picture" src="고양이/샴.jpg" alt="샴"><p class="cat-explain"><b>샴</b><br>태국에서 자연 발생한 종으로 흔히 태국 왕가의 고양이 품종이라고 알려져있는 편이지만 이는 영국 왕실과 미국 대통령에게 선물되었기 때문 원래는 아니다. 사실상 독립심이 강한 고양이로서는 조금 특이한 성격일 정도로 사람 손 타는 걸 좋아하며 개체별 특이성이 강한 개냥이.</p></div>
+                    <div class="cat-TMI"><img class="cat-picture" src="고양이/코랫.jpg" alt="코랫"><p class="cat-explain"><b>코랫</b><br>옛날에 태국에서는 부를 가져다준다고 믿어져 상류층 사이에서 선물하기도 했다고 한다. 성격은 러시안 블루보다 더 주인에게 의존적이며, 독점욕이 강하다. 이 때문에 주변에 사람이 없으면 상당히 불안해한다. 또한 고집이 강한 편이어서 자기 주장을 쉽게 굽히지 않는다.</p></div>
+                    <div class="cat-TMI"><img class="cat-picture" src="고양이/버미즈_고양이.jpg" alt="버미즈_고양이"><p class="cat-explain"><b>버미즈 고양이</b><br>점프력이 뛰어나고 높은 곳에 잘 올라가는 버미즈 고양이는 사람들에게 친근하게 굴며 잘 어울리지만 다른 고양이 품종들과는 쉽게 어울리는 성격은 아니다. 1930년, 왕마우라는 이름의 고양이가 탐슨 박사에 의해 버마에서 미국으로 들어왔다. 왕마우 고양이는 버미즈 고양이 품종의 시초가 된다.</p></div>
+                </td>
+                </tr>
+
+                <tr><th colspan="2">터키</th></tr>
+                <tr><td><img class="country-flag" src="국기/터키.png" alt="터키"></td>
+                <td>
+                    <div class="cat-TMI"><img class="cat-picture" src="고양이/터키시_반.jpg" alt="터키시_반"><p class="cat-explain"><b>터키시_반</b><br>반 패턴 이라 불리는 특징적인 피모의 색과 더불어 물과 친화적이라는 점에 특징이다. 이 품종은 희귀하며, 밴 패턴으로 구별되는데 머리와 꼬리에는 크림색 또는 붉은색의 반점이 있으며, 나머지는 흰색을 띄고 있다. 앙고라와의 차이점이다. 똑똑하고 사람을 잘 따르지만 활동적이고 독립성도 있다.</p></div>
+                    <div class="cat-TMI"><img class="cat-picture" src="고양이/터키시_앙고라.jpg" alt="터키시_앙고라"><p class="cat-explain"><b>터키시 앙고라</b><br>터키의 수도 앙카라의 옛 이름을 따왔다. 털이 긴 중~장모종이다. 터키시 앙고라 중 단모종이란 건 없다. 장모종 중 유일하게 손꼽히는 지랄묘. 수의사의 손을 잘 물기도 하며, 고양이 품종 중 지능이 높은데, 지능이 높다는 말은 호기심이 많고 잔머리를 잘 굴리고 복수심이 강하단 뜻이기도 하다.</p></div>
+                </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+                        <div class="continent" id="America">
+                            <div class="continent-title" id="America-title"><h1 class="continent-title-p">America</h1>
+                            <table border="1" id="America-cat">
+                                <tr><th colspan="2">U.S.A</th></tr>
+                                <tr><td><img class="country-flag" src="국기/USA.png" alt="U.S.A"></td>
+                                <td>
+                                    <div class="cat-TMI"><img class="cat-picture" src="고양이/벵갈.jpg" alt="벵갈"><p class="cat-explain"><b>벵갈</b><br>상당한 고가의 외래고양이에 속한다고 할 수 있으며 집고양이와 삵과의 교배로 나온 혼혈인만큼 상당한 야성을 지니고 있다. 야성 덕분에 활동력이 무시무시하게 높은 편. 털 무늬는 스팟(점박이), 로젯(표범 무늬), 마블 등의 타입이 있다.</p></div>
+                                    <div class="cat-TMI"><img class="cat-picture" src="고양이/랙돌.jpg" alt="랙돌"><p class="cat-explain"><b>랙돌</b><br>고양이계의 얼굴마담이다. 래그돌은 성장이 매우 느린 고양이로, 생후 2~3년이 지나서야 털의 무늬나 색깔이 완전히 자리잡게 되며 생후 4년쯤 돼야 완전히 성장한다. 앙고라 계열이지만 여러 혈통이 섞인 하얀 장모종과 버만 고양이를 교배시켜 래그돌을 탄생시켰다. 종특 유전병은 없다.</p></div>
+                                    <div class="cat-TMI"><img class="cat-picture" src="고양이/메인쿤.jpg" alt="메인쿤"><p class="cat-explain"><b>메인쿤</b><br>미국 동부의 메인 주(Maine)에서 자연 발생했다. 농장에서 주로 쥐를 잡는 용도로 사육됐으며 고양이 중 가장 크며 매우 똑똑하고 온화한 성격을 가지고 있어 영미권에서는 거인 신사로 통한다. 물을 좋아한다.  유전병으로 비대성 심근증이라는 심장질환이 있이있다.</p></div>
+                                    <div class="cat-TMI"><img class="cat-picture" src="고양이/아메리카_쇼트헤어.jpg" alt="아메리카_쇼트헤어"><p class="cat-explain"><b>아메리카_쇼트헤어</b><br>원래 애완용이 아니라 쥐잡이용 고양이였던 만큼 턱 힘도 센 편이고 활동성도 높다. 성격이 다른데, 평균적으로 주인에 대한 호기심도 높고 애교가 굉장히 많음과 더불어 독점욕도 강한 고양이이다.</p></div>
+                                    <div class="cat-TMI"><img class="cat-picture" src="고양이/아메리칸_컬.jpg" alt="아메리칸_컬"><p class="cat-explain"><b>아메리칸 컬</b><br>1981년 캘리포니아주 레이크우드에서 슐라미스(Shulamith) 라는 이름의 검은 암컷은 같은 곱슬곱슬한 귀를 가진 고양이 새끼를 낳았고, 오늘날 모든 미국 컬스의 조상이 되었다. 바깥쪽으로 구부러진 귀가 큰 특징이다. 활기찬 고양이입니다. 사람들에게 매우 관심이 많으며 운동량도 많은편.</p></div>
+                                    <div class="cat-TMI"><img class="cat-picture" src="고양이/오시캣.jpg" alt="오시캣"><p class="cat-explain"><b>오시캣</b><br>호피 무늬가 특징이다. 야생 고양이를 닮았지만 야생 고양이의 유전자는 없다. 오컬트와 닮아서 이름이 붙여졌다. 샴과 아비시니아에서 만들어졌다. 경계심이 강하고 낯을 가리는 편이지만 익숙한 환경에서는 매우 어리광을 부립니다. 또한, 잘 울지 않고 울어도 울음소리가 작다는 특징이 있습니다.</p></div>
+                                    <div class="cat-TMI"><img class="cat-picture" src="고양이/발리니즈.jpg" alt="발리니즈"><p class="cat-explain"><b>발리니즈</b><br>이름의 유래는, 샴고양이 특유의 경쾌한 걸음걸이에 긴 털이 찰랑찰랑 움직이는 모습이 발리 댄서의 모습과 같아 붙은 것이다. 활동적이고 사랑스러운 고양이이며 사람곁에 조용히 앉아 가르랑거리며 쓰다듬어 주는 것을 좋아합니다. 샴고양이 후손에 걸맞게 다소 시끄럽게 울어대는 고양이입니다.</p></div>
+                                    <div class="cat-TMI"><img class="cat-picture" src="고양이/세렝게티.jpg" alt="세렝게티"><p class="cat-explain"><b>세렝게티</b><br>벵갈과 오리엔탈 쇼트헤어와 교배해서에 태어났다. 민첩하고 활달하여 전속력으로 달리거나 높은 곳에 뛰어오르는 등장난기가 많고 사람과 다른 동물들과도 잘지낸다. 작은 얼굴과 매우 크고 둥근 귀가 특징이다. 무늬는 밝은 베이직, 황색,은색 배경에 검은색, 짙은 갈색의 반점이 있다.</p></div>
+                                    <div class="cat-TMI"><img class="cat-picture" src="고양이/오리엔탈_쇼트헤어.jpg" alt="오리엔탈_쇼트헤어"><p class="cat-explain"><b>오리엔탈_쇼트헤어</b><br>샴 고양이로부터 발달하고 밀접하게 관련된 미국 고양이의 한 종류이며 샴 고양이 머리와 몸의 형태를 유지하지만, 다양한 색상과 무늬로 나타난다. 광대가 도드라진 외모가 특징이다. 사람과 친화적이고 믿음이 강한 성격이며, 자신의 존재를 항상 어필한다.</p></div>
+                                    <div class="cat-TMI"><img class="cat-picture" src="고양이/먼치킨.jpg" alt="먼치킨"><p class="cat-explain"><b>먼치킨</b><br>팔다리가 무척 짧기 때문에 달리기 능력과 점프 능력도 일반 고양이들에 비해 떨어진다. 유전병이 심한 품종으로 알려져있지만 현재까지 나온 연구결과로 밝혀진 바는 의외로 건강한 편이다. 앞다리가 뒷다리보다 짧은 체형으로 인해 척추전만증에 대한 위험도가 높다.</p></div>
+                                    <div class="cat-TMI"><img class="cat-picture" src="고양이/히말라얀.jpg" alt="히말라얀"><p class="cat-explain"><b>히말라얀</b><br>1950년대 페르시안과 샴의 인공교배로 탄생. 털빛이나 눈빛은 샴과, 체형은 페르시안과 닮았다. 1930년경부터 미국과 영국에서 품종이 개량되기 시작했다. 온순하여 사람을 잘 따르며, 울음소리가 작다. 몸통은 짧지만 두껍고 두꺼운 다리 그리고 짧고 굵은 목을 가지고 있다. 꼬리는 짧고 귀는 작다.</p></div>
+                                    <div class="cat-TMI"><img class="cat-picture" src="고양이/통키니즈.jpg" alt="통키니즈"><p class="cat-explain"><b>통키니즈</b><br>미국과 캐나다에서 샴 와 버미즈 를 이종교배한 품종으로 독특하게 생기 있고 장난기 많은 성격을 공유하고 있으며, 다양한 색깔의 뾰족한 코트 패턴으로 비슷하게 구별된다.  일명 원숭이냥이, 개냥이라 불릴 정도로 매우 사교적이고 활발하다.</p></div>
+                                    </td>
+                                </tr>
+                
+                                <tr><th colspan="2">캐나다</th></tr>
+                                <tr><td><img class="country-flag" src="국기/캐나다.png" alt="캐나다"></td>
+                                <td>
+                                    <div class="cat-TMI"><img class="cat-picture" src="고양이/스핑크스.jpg" alt="스핑크스"><p class="cat-explain"><b>스핑크스</b><br>고대 이집트까지 연원이 거슬러 올라가는 유서 깊은 품종...처럼 보일 수도 있지만, 실제로는 1960년대 캐나다에서 자연발생한 돌연변이 개체로부터 시작된 품종. 개기름을 뿜는다. 그래서 목욕을 어느 정도 해주는 것이 중요하다.피부가 노출되어 있어 피부병이 발생하기 쉽다.</p></div>
+                                    <div class="cat-TMI"><img class="cat-picture" src="고양이/통키니즈.jpg" alt="통키니즈"><p class="cat-explain"><b>통키니즈</b><br>미국과 캐나다에서 샴 와 버미즈 를 이종교배한 품종으로 독특하게 생기 있고 장난기 많은 성격을 공유하고 있으며, 다양한 색깔의 뾰족한 코트 패턴으로 비슷하게 구별된다.  일명 원숭이냥이, 개냥이라 불릴 정도로 매우 사교적이고 활발하다.</p></div>
+                                    </td>
+                                </tr>
+                </table>
+            </div>
+        </div>
+
+<div class="continent" id="Africa">
+    <div class="continent-title" id="Africa-title"><h1 class="continent-title-p">Africa</h1>
+    <table border="1" id="Africa-cat">
+        <tr><th colspan="2">에티오피아</th></tr>
+        <tr><td><img class="country-flag" src="국기/에티오피아.png" alt="에티오피아"></td>
+        <td>
+            <div class="cat-TMI"><img class="cat-picture" src="고양이/아비시니안.jpg" alt="아비시니안"><p class="cat-explain"><b>아비시니안</b><br>귀엽고 아름답지만 지랄묘에 개냥이로 잘 알려진 종이다. 활동적이어서 나무타기나 물놀이를 좋아한다. 성격은 민첩하며 예민하고 1868년 영국 병사가 고대 에티오피아인 아비시니아에서 가져온 고양이가 유명해졌고한다.</p></div>
+            </td>
+        </tr>
+        <tr><th colspan="2">이집트</th></tr>
+        <tr><td><img class="country-flag" src="국기/이집트.png" alt="이집트"></td>
+        <td>
+            <div class="cat-TMI"><img class="cat-picture" src="고양이/이집션_마우.jpg" alt="이집션_마우"><p class="cat-explain"><b>이집션 마우</b><br>이집트인들은 고양이를 매우 사랑하고 그들을 숭배하는 민족으로 잘 알려져 있다. "사자의 서"라는 책에는 태양의 신인 라가 스팟티드 태비 고양이로 묘사되어 있다. 활동적이고 매우 튼튼한 이집션 마우는 충분히 운동할 수 있도록 해주어야한다. 친근하고 충직한 고양이입니다.</p></div>
+           </td>
+        </tr>
+</table>
+</div>
+</div>
+
+<div class="continent" id="etc">
+    <div class="continent-title" id="etc-title"><h1 class="continent-title-p">기타</h1>
+    <table border="1" id="etc-cat">
+        <tr><th colspan="2">페르시안</th></tr>
+        <tr>
+        <td>
+            <div class="cat-TMI"><img class="cat-picture" src="고양이/페르시안.jpg" alt="페르시안"><p class="cat-explain"><b>페르시안</b><br>  전체적으로 고양이 중 조용하고 성격도 순한 편이다. 장모종 중에서도 부드러우면서도 가는 속털을 가진 이중모로 인해 털의 부드러움으로서는 최고이지만, 이는 반대로 털빠짐이 많은 고양이 중에서도 최고를 자랑한다는 걸 뜻하므로 털은 열심히 빗겨줘야 한다.</p></div>
+            <div class="cat-TMI"><img class="cat-picture" src="고양이/엑죠틱.jpg" alt="엑죠틱"><p class="cat-explain"><b>엑죠틱 숏헤어</b><br>호기심이 많고 활달하며 환경의 변화에 민감하지 않으며 대개 모든 사람들과 잘 어울립니다. 짧은 다리, 짧은 꼬리, 크고 둥근 눈과 이국적 피모의 극단적 외모를 가지고 있다. 페르시아 고양이를 아메리칸 숏헤어 고양이 그리고 때로는 버미즈 고양이와 교차교배시켜 탄생했다. </p></div>
+            <div class="cat-TMI"><img class="cat-picture" src="고양이/페르시안_친칠라_페키.jpg" alt="페르시안_친칠라_페키"><p class="cat-explain"><b>페르시안_친칠라 페키</b><br>페키 페이스는 현대에 태어난 잡종이다.</p></div>
+            <div class="cat-TMI"><img class="cat-picture" src="고양이/페르시안_친칠라_돌.jpg" alt="페르시안_친칠라_돌"><p class="cat-explain"><b>페르시안_친칠라 돌</b><br> 클래식 또는 트래디셔널이라고 한다. 돌 페이스 얼굴이 생기는 이유는 첫 번째로 근대 유럽에서 페르시안과 타 장모종의 분별없는 교배가 성행한 탓에 현대의 순종 페르시안이어도 다른 품종의 유전자가 남아있는 경우가 많아서이고,</p></div>
+            <div class="cat-TMI"><img class="cat-picture" src="고양이/히말라얀.jpg" alt="히말라얀"><p class="cat-explain"><b>히말라얀</b><br>1950년대 페르시안과 샴의 인공교배로 탄생. 털빛이나 눈빛은 샴과, 체형은 페르시안과 닮았다. 1930년경부터 미국과 영국에서 품종이 개량되기 시작했다. 온순하여 사람을 잘 따르며, 울음소리가 작다. 몸통은 짧지만 두껍고 두꺼운 다리 그리고 짧고 굵은 목을 가지고 있다. 꼬리는 짧고 귀는 작다.</p></div>
+            <div class="cat-TMI"><img class="cat-picture" src="고양이/나폴레옹.jpg" alt="나폴레옹"><p class="cat-explain"><b>나폴레옹</b><br>페르시안과 먼치킨을 교배해서 만든 품종으로 먼치킨과 마찬가지로 다리가 짧다. 사교적이고 느긋하며 사람과 잘 어울리고 가정에 어울린다.</p></div>
+            </td>
+        </tr>
+
+        <tr><th colspan="2">사바나 캣</th></tr>
+        <tr>
+        <td>
+            <div class="cat-TMI"><img class="cat-picture" src="고양이/사바나_캣.jpg" alt="사바나"><p class="cat-explain"><b>사바나 캣</b><br>암컷 샴고양이와 수컷 서벌의 교배종. 사바나캣을 탄생시키기 위해서는 심혈을 기울인다. 서벌이 집고양이보다 덩치가 커서 교배가 어려운 것도 있지만, 서벌이 배우자 고르는 눈이 매우 까다로워서 집고양이와는 교배를 거부하는 경우도 있고, 심지어 서벌이 집고양이를 물어죽일 수도 있기 때문.</p></div>
+            <div class="cat-TMI"><img class="cat-picture" src="고양이/사바나_캣1.jpg" alt="사바나_캣"><p class="cat-explain"><b>사바나 캣</b><br>1세대는 서벌과 마찬가지로 작은 머리, 큰 귀, 긴 다리를 지니고 있으며 덩치도 서벌과 비슷하고, 서벌의 특징 중 하나인 귀 뒤의 무늬까지 있지만 5세대 이하는 일반 집고양이와 비슷한 정도까지 작아진다. </p></div>
+            <div class="cat-TMI"><img class="cat-picture" src="고양이/사바나_캣2.jpg" alt="사바나_캣"><p class="cat-explain"><b>사바나 캣</b><br>세대는 F(filial)라 표기한다. 1F에는 서벌의 야생성이 남아있고 F2부터는 많이 사라진다. 이 때문에 F1은 키우기 매우 힘들다. 서벌 특유의 무늬를 제외하면 형태도 집고양이와 크게 차이가 없으며 특히 서벌의 혈통으로 인한 야생성은 점점 사라지는 편.</p></div>
+            </td>
+        </tr>
+</table>
+</div>
+</div>
+    </div>
+        </section>
+<aside></aside>
+</div>
+<footer><p>HTML5 Programming for term project topic is about dog and cat</p></footer>
+</div>
+<!-- 오른쪽 고정바 부분 -->
+<div class="right">
+    <ul class="right-pull-menu">
+        
+                    <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="#America">아메리카</a></span></li>
+                    <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="#Asia">아시아</a></span></li>
+                    <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="#Africa">아프리카</a></span></li>
+                    <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="#Europe">유럽</a></span></li>
+                    <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="#etc">기타</a></span></li>
+                    
+    </ul>
+</div>   
+</body>
+</html>
+    
+</body>
+</html>

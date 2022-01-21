@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World of Dog</title>
+    <!-- 메인 바랑 header 부분 기본틀 -->
+    <link rel="stylesheet" href="css\tag_bar.CSS">
+    <style>
+/*nav 부분 메뉴 리스트*/
+        .nav-pull-list{
+            display: block;
+            overflow: hidden;
+            border: 2px grey;
+           
+        }
+        .nav-pull-menu-list{
+            display: block;
+        }.nav-pull-menu-item{
+            list-style-type: none;
+        }
+        .nav-pull-menu-item-title{
+            display: block;
+            float: left;
+            width: 266px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: white;
+        }
+        .nav-pull-menu-item-title>a{color:black;}
+        .nav-pull-menu-item-title:hover{
+            background-color: rgba(0,0,0,0.8);
+        }
+/*지도 부분*/
+        .world{
+            display: block;
+            width: 100%;
+            position: relative;
+        }
+
+        #world-map{
+            margin: 0px 3px;
+            width: 100%;
+            overflow-x: scroll; 
+        }
+        #world-map-img{
+            width: 1327px;
+        }
+        /*지도 반응형 웹 구현*/
+        @media screen and (max-width: 767px) {
+            #world-map-img{width: 500px;}
+        }
+        @media screen and (min-width: 767px) and (max-width: 959px) {
+            #world-map-img{width: 900px;}
+        }
+        /* 대륙별 구별*/
+            .continent{
+                text-align: center;
+            }
+            /*각 나라별 국기*/
+            .country-flag{
+                width: 120px;
+                height: 60px;
+            }
+            /*각 나라별 국견종 설명*/
+            .dog-TMI{
+                margin: 0.5% 0.5% 0% 0.5%;
+                display: inline-block;
+                float: left;
+                border: 1px solid black;
+                width: 200px;
+                height: 360px;
+                overflow: hidden;
+            }
+            /*각 나라별 국견종 설명란 안에 있는 강아지 img*/
+            .dog-picture{
+                margin-top: 2%;
+                width: 180px;
+                height: 90px;
+            }
+    /*세계지도 설명 부분 반응형 웹 구현*/
+</style><link rel="stylesheet" href="css\Responsive_Web.css">
+    <style>
+        /*오른쪽 고정 메뉴 바*/
+        .right{
+            background-color: white;
+            float: right;
+            position: fixed;
+            width: 13%;
+            height: 220px;
+            right: 0px;
+            top: 70px;
+            margin-top: 10px;
+            font-size: 80%;
+            overflow-x: scroll;
+        } 
+       .right-pull-menu{
+           position: absolute;
+           right: 50%;
+            top: 0px;
+            margin-right: -133px;
+       }
+       .continent-title-p{
+           background-color: yellow;
+       }
+    </style>
+</head>
+<body>
+    <!-- 고정바 부분 -->
+    <div class="inner_header_contents">
+        <div class="inner_header_mainpage">
+            <a href="댕댕이와 냥이.html" >
+            <img width="132" height="56" src="댕댕고양미니.png" alt="댕댕고양">
+        </a>
+        </div>
+            <ul>
+                <li><a href="댕댕.html">강아지</a></li>
+                <li><a href="냥냥.html">고양이</a></li>
+            </ul>
+            <div class="title"><h1>댕댕이와 냥이</h1></div>
+        </div>
+        <!-- center 부분 -->
+        <div class="center">
+            <!-- header 부분 -->
+        <header> 
+                <div class="header-body-img"><img  id="header-body-inner-img" src="댕댕고양.png" alt="댕댕고양">
+                    <div class="header-body-font"><h1>~댕댕이와 냥이~</h1></div>
+                </div>
+        </header>
+        <!-- 메뉴 바 nav 부분 -->
+        <nav class="nav-pull">
+            <div class="nav-pull-list">
+                <ul class="nav-pull-menu">
+                    
+                    <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="#America">아메리카</a></span></li>
+                    <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="#Asia">아시아</a></span></li>
+                    <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="#Africa">아프리카</a></span></li>
+                    <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="#Europe">유럽</a></span></li>
+                    <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="#Austrailia">오세아니아</a></span></li>
+                    
+                </ul>
+            </div>
+        </nav>
+    <div class="main">
+        <!-- section 부분 table 만든 부분 -->
+        <section>
+            <div class="world">
+            <div id="world-title"><h1>세계 지도</h1></div>
+            <div id="world-map"><img id="world-map-img" src="세계지도1.jpg" alt="세계지도"></div>
+        </div>
+        <div class="contry">
+            <div class="continent" id="Europe">
+                <div class="continent-title" id="Europe-title"><h1 class="continent-title-p">Europe</h1>
+                <table border="1" id="Europe-dog"">
+                    <tr><th colspan="2">독일</th></tr>
+                    <tr>
+                        <td>
+                        <img class="country-flag" src="국기/독일.png" alt="독일">
+                    </td>
+                    <td>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/저먼세퍼드.jpg" alt="저먼셔퍼드"><p class="dog-explain"><b>저먼셔퍼드</b><br>목양견이였으나 1차 세계대전에 충성심이 강하고 강인하며 머리가 좋아 군견으로 키워졌다. 세계 강아지 지능 순위 3위를 차지했다. 지금은 경찰, 구조, 수색, 경비 등에서 많은 활약중이다.</p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/도베르만핀셔.jpg" alt="도베르만핀셔"><p class="dog-explain"><b>도베르만 핀셔</b><br>견종 지능 순위 5위로 한 세금징수원이 호신을 위해 만들었고 그 사람의 이름이 도베르만이다.  단모종이라 실내에서 키우자. 도베르만의 꼬리와 귀가 뾰족하고 짧은 이유는 인위적으로 잘랐기 때문 이런짓 좀 하지말자...</p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/포메라니안.jpg" alt="저먼셔퍼드"><p class="dog-explain"><b>포메라니안</b><br>사모예드와 스피츠의 개량종으로 포메른 공국에서 왔다. 2차 대전 패로 폴란드 영토였는데 지금은 독일이 다시 차지했다. 예쁜 외모와 달리 성격이 안 좋다. 인기가 많은 만큼 혈통서에 따라서 가격이 천차만별이다.</p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/닥스훈트.jpg" alt="닥스훈트"><p class="dog-explain"><b>닥스훈트</b><br>독일어로 오소리 개로 작은 동물을 포획하는 수렵견이 원조다. 다리가 짧은건 인위적이라서 유전질환(연골발육부전증)이 있다. 수의사의 개입없이는 번식을 못 한다고...지랄견 후보 중 한견이니 신중하게 입양하자.</p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/슈나우져.jpg" alt="미니어쳐 슈나우저"><p class="dog-explain"><b>미니어쳐 슈나우저</b><br>슈나우저는 주둥이라는 뜻이다. 3대 지랄견으로 성격이 나쁘다기 보다 너무 활발하고 튼튼하다. 자신의 배가 되는 견종에도 덤빈다고...그리고 유전병(진행성 망막 위축증)이있다. 그래도 귀여워서 인기가 꽤 있다.</p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/로트와일러.jpg" alt="로트와일러"><p class="dog-explain"><b>로트와일러</b><br>유럽과 미국에서 경비견의 대명사로 주인한테는 매우 충성심이 강하다. 하지만 목줄과 입마개는 필수! 근육질인 몸인데 공격력과 성격이 사나워 맹견으로 분류 및 미국에서 살상사고 견종 2위를 차지했다.</p></div>
+                        </td>
+                </tr>
+                    
+                <tr><th colspan="2">프랑스</th></tr>
+                    <tr>
+                        <td>
+                        <img class="country-flag" src="국기/프랑스.png" alt="프랑스">
+                    </td>
+                    <td>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/그레이트_피레니즈.jpg" alt="그레이트_피레니즈"><p class="dog-explain"><b>그레이트 피레니즈</b><br>1박2일의 상근이로 잘알려져있는 견종이다. 초대형 견종으로 피레네 산맥의 개로 활동량이 엄청나 넓은 마당이 있는 주택이 아니고서는 키우기가 힘들다. 순둥순둥하고 주인을 지킨다는 자신감을 가지고 있다.</p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/빠삐용.jpg" alt="빠삐용"><p class="dog-explain"><b>빠삐용</b><br>프랑스어로 나비라는 뜻이며 귓가와 얼굴쪽의 무늬가 나비같아서 지어진 이름이다. 스패니엘의 변종으로 스피츠 종과 섞여 개량된 품종이다. 지능순위는 8위로 소형견 중 토이푸들 다음이다. 애정을 준 상대에게는 보답하는 성격으로 질투도 많다.</p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/프렌치_불독.jpg" alt="프렌치 불독"><p class="dog-explain"><b>프렌치 불독</b><br>불독과 토종 테리어의 교배해서 탄생했다. 각진 얼굴에 납작한 코와 쭈글쭈글한 주름을 가져 귀여워 매니아층이 두텁다. 다만 코가 납작한 단두종이라 호흡에 문제가 있다. 사회화를 하지 않으면 공격적이며 최시원 개로 습격사건으로 유명하다.</p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/비숑프리제.jpg" alt="비숑프리제"><p class="dog-explain"><b>비숑프리제</b><br>처음부터 가정견으로 개량되었다. 곱슬곱슬한 털 탓에 푸들과 닮았고, 어릴 땐 말티즈와 꽤 흡사하다. 복슬한 털로 인해 관리를 잘하면 고급스러움이 있다. 하지만 우리나라에서 순종이 드물어 잡종을 순종으로 파는 경우가 많다. 이런짓 하지말자...</p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/푸들.jpg" alt="푸들"><p class="dog-explain"><b>푸들</b><br>프랑스 국견이지만 개량전 독일 사냥견이었다.  귀족이 많이 키운 강아지로 체고에 따라 스탠다드(38cm 이상), 미니어쳐(25~38cm), 토이(28cm 미만)로 구분한다. 최대 장점: 털 빠짐(X), 성격 좋고 지능순위 2위, 훈련성 탑3이다. 다만 활발하다.</p></div>
+                    </td>
+                </tr>
+                    
+                <tr><th colspan="2">이탈리아</th></tr>
+                    <tr>
+                        <td>
+                        <img class="country-flag" src="국기/이탈리아.png" alt="이탈리아">
+                    </td>
+                    <td>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/말티즈.jpg" alt="말티즈"><p class="dog-explain"><b>말티즈</b><br>몰타섬에 유입된 개가 조상이다. 주인에게 치대는 성향이 강하고 눈치가 빨라서 주인의 마음을 민감하게 감지하는 편이다. 자기 주장이 강하고 고집이 있다. 털이 끝없이 자라 세심한 관리가 필요하다. 슬개골이 좋지않아 격하게 뛰면 안 된다.</p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/파라오_하운드.jpg" alt="파라오_하운드"><p class="dog-explain"><b>파라오 하운드</b><br>이름만 보면 이집트에서 출발한 것 같지만 사실은 지중해의 몰타에서 유래된 품종으로 몰타어로 '켈브 탈 페넥'로 토끼 사냥개란 뜻이다. 모래색 털은 아주 짧고 코, 혀, 귀, 발바닥까지 몽땅 분홍색이다. 점프를 아주 잘 하고 체력이 좋고, 지능도 높다. 가죽이 얇아 추운 지방에선 기르기 어렵다.</p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/이탈리안_그레이_하운드.jpg" alt="이탈리안 그레이 하운드"><p class="dog-explain"><b>이탈리안 그레이 하운드</b><br>그레이 하운드를 애완견으로 개량한 견종이다.개 중에서 가장 빨리 달리는 개이다. 개 중에서는 드물게 눈이 좋다. 게을러 늘어져 있는 것을 좋아하고, 잘 짖는 편도 아니며, 필요한 운동량이 많지 않아 아파트에서 기르기 적합하다.</p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/카네_코르소.jpg" alt="카네 코르소"><p class="dog-explain"><b>카네 코르소</b><br>이탈리아의 마피아들이 경비견으로 많이 애용해서 마피아견이라 불린다. 맹견이고 힘과 전투력 역시 견종 전체를 통틀어도 그 강함은 최상위권 따라서 사회화 훈련은 무조건 필수다. 여러 안전도구도 가장 크고 단단한걸 준비해야한다. 주인을 지키고자 하는 본능 충성심이 최고인 경비, 경호견이다.</p></div>
+                    </td>
+                </tr>
+                    
+                <tr><th colspan="2">스위스</th></tr>
+                    <tr>
+                        <td>
+                        <img class="country-flag" src="국기/스위스.png" alt="스위스">
+                    </td>
+                    <td>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/세인트_버나드.jpg" alt="세인트_버나드"><p class="dog-explain"><b>세인트 버나드</b><br>주로 구조견으로 쓰이는 개로 역사가 길다. 베토벤이라는 영화를 통해서도 익숙한 개다. 이름이 묘하게 성스러운데, 이 개를 길러왔던 수도자들이 머무르던 곳이 바로 알프스 산맥에 위치한 그랑 생 베르나르 고개(Col du Grand-Saint-Bernard)에 있는 성 베르나르도 수도원 부속 숙박소 였다고 </p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/버니즈_마운틴_독.jpg" alt="버니즈_마운틴_독"><p class="dog-explain"><b>버니즈 마운틴 독</b><br>로마군이 스위스를 침략할 때 데리고 온 몰로서스 종이 지역 토종 목양견과 교잡해서 생긴 견종이다. 성견 버니즈 마운틴 독은 자동차 한대 정도를 끌 힘이있다. 하루에 최소 한시간 이상 산책을 시켜주는 게 좋다. 퇴행성 관절염에 매우 빨리 걸리는 견종이며 평균 수명이 7-8세로 낮다.</p></div>
+                    </td>
+                </tr>
+                   
+                <tr><th colspan="2">헝가리</th></tr>
+                    <tr>
+                        <td>
+                        <img class="country-flag" src="국기/헝가리.png" alt="헝가리">
+                    </td>
+                    <td>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/풀리.jpg" alt="풀리"><p class="dog-explain"><b>풀리</b><br>코몬도르보다 체격이 작기에 코몬도르보다 더 대걸레와 비슷하다. 티베탄 테리어와 헝가리의 대걸레털 토착견을 교배하여 만들어진 견종이다.씻길 때에는 털을 그야말로 걸레 빨듯이 빨아줘야 한다. 그러지 않으면 땅에 닿는 부분이 오래 쓴 대걸레처럼 된다. 코몬도르와 같이 경비를 서기도 했다.</p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/코몬도르.jpg" alt="코몬도르"><p class="dog-explain"><b>코몬도르</b><br>헝가리에서 번성한 몸집이 큰 목양견. 사우스 러시안 오브차카를 선조로 뒀다고 한다 헝가리에선 진돗개와 같은 대우를 받는 견종이다. 털이 이상할 정도로 배배 꼬여서 얼핏 보면 방금 산 대걸레의 걸레 부분을 닮았다. 털이 방어효과가 좋아 늑대랑 마주칠 때 늑대의 송곳같은 송곳니를 막아준다.</p></div>
+                    </td>
+                </tr>
+                    
+                <tr><th colspan="2">UK</th></tr>
+                    <tr>
+                        <td>
+                        <img class="country-flag" src="국기/UK.png" alt="UK">
+                    </td>
+                    <td>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/잭_러셀_테리어.jpg" alt="잭 러셀 테리어"><p class="dog-explain"><b>잭 러셀 테리어</b><br>서양의 애견인들 사이에서 3대 지랄견을 뛰어 넘은 악마견으로 인정받는 여우 사냥개 견종이다. 엄청난 체력과 점프력에 테리어 종 특유의 까탈스러움과 높은 지능, 민첩함, 독립 정신, 장난기, 집요함, 무모함을 빠짐없이 갖춘 것으로 명성이 높다. 운동량 많고 이중모라 털이 많이 빠져 키우기 어렵다.</p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/요크셔_테리어.jpg" alt="요크셔 테리어"><p class="dog-explain"><b>요크셔 테리어</b><br>19세기 중반 스코틀랜드 노동자들이 기르던 개로, 그들이 일을 찾으러 요크셔에 올 때 여러 종의 조그마한 테리어들을 데려와 쥐 잡기용 개로 이용했다. 외모와 달리 성격이 까다롭고, 고집이 세다. 훈련이 어렵고 잘 짖는다. 움직이는 보석이라는 별명으로 유명하다 그래서 인기가 많다.</p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/보더_콜리.jpg" alt="보더_콜리"><p class="dog-explain"><b>보더 콜리</b><br> 스코틀랜드의 국경 지방에서 양치기개로 사용되었다. 무려 지능순위 1위로 머리가 매우 뛰어나다. 워낙 똑똑하기에 충분한 교감과 적절한 훈련을 하지 않는 경우 뛰어난 지능과 체력을 나쁜 방향으로 쓸 수 있다. 꾀병, 삐짐 뿐만 아니라 위협에다 공격까지 서슴지 않고 간식을 쟁취하기도 한다.</p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/불마스티프.jpg" alt="불마스티프"><p class="dog-explain"><b>불마스티프</b><br>불마스티프는 영국 원산의 초대형 견종이다. 불도그와 마스티프를 교배하여 만들어졌다.전투력은 오브차카와 쌍벽을 이루는 정도로 한 번 물면 주인의 명령이 떨어지기 전까지는 놓지 않으며 경비견, 호신견으로 쓰이려고 애완견으로 길러지는 경우도 종종 있다.</p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/폭스_테리어.jpg" alt="폭스 테리어"><p class="dog-explain"><b>폭스 테리어</b><br>여우 사냥견이였다. 예민하고 행동이 민첩하며 두뇌가 총명하다. 하지만 입질이 심한편이고 성질이 아주 빨리 달아오르고 흥분하는 경향이 있어 제대로 훈련시키지 않으면 사람을 물기도 한다. '용인 여아 개 물림 사건'의 주인공이다. 어릴 때부터 뛰어다니며 온갖 물건에 뛰오르고 장난도 심할 수 있다. </p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/불_테리어.jpg" alt="불 테리어"><p class="dog-explain"><b>불 테리어</b><br>박명수 닮은 견종이다. 우스꽝스럽지만 투견 출신이다. 이름의 유래이자 출생의 배경이 불도그과 테리어의 교배. 영국에서 곰이나 황소를 상대하려고 만든 종이다. 개량해도 투견은 투견이다라는 생각이 안 들게 매우 순해졌다. </p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/비글.jpg" alt="비글"><p class="dog-explain"><b>비글</b><br>비글의 이름은 ‘요란하게 짖는다’, 또는 ‘작다’를 나타내는 프랑스어에서 유래됐다. 영국의 귀족들이 토끼를 사냥하기 위해 만든 하운드 계열 견종이다. 하운드 중에서 제일 작으며 민첩하다. 머리는 매우 나쁘다. 주장이 있고 꽤나 드센 성격. 억센 훈육이 필요하며 운동량과 행동반경이 많이 필요하다.</p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/골든_리트리버.jpg" alt="골든 리트리버"><p class="dog-explain"><b>골든 리트리버</b><br>스코틀랜드 출신. 온순한 성미와 똑똑한 것으로 인해 맹인 안내견으로도 유명하다. 사람과 잘지내서 밤손님한테도 처음 만나서 반갑다고 꼬리치며, 금고까지 안내할 것 같은 견종이다. 지능순위는 4위로 똑똑하며 원래 사냥개 중에서도 총에 맞은 새를 물어오는 것(Retriever)을 목적으로 교배됐다.</p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/코커_스파니엘.jpg" alt="코커_스파니엘"><p class="dog-explain"><b>코커 스파니엘</b><br>새 사냥견으로 3대 지랄견이다. 한줄로 표현하자면 끝을 모르는 식탐과, 뒤돌아서면 잊어주는 쿨함이 매력. 길러본 사람들의 평가로는 "뇌까지 근육", "내 몸에서 사리가 나와요" 등, 활달함이 지나쳐 아주 재앙급이다. 말도 안 듣고, 교육도 힘겹다. 그나마 지구력이 떨어져 자주 놀면 덜한다.</p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/카발리에_킹_찰스_스파니엘.jpg" alt="카발리에 킹 찰스 스파니엘"><p class="dog-explain"><b>카발리에 킹 찰스 스파니엘</b><br>온화한 성격과 예쁜 외모, 주인의 활동 수준에 자기 활동을 맞춰주는 배려심 등 천사견이다. 영국 왕실의 애완견 자리를 지키고 있었으나 트렌드가 눈과 입 사이가 짧은 개라 현재의 킹 찰스 스파니엘의 모습이 됐다. 단두종인 킹 찰스 스파니엘과 구분하기 위해 기사라는 뜻인 캐벌리어를 붙였다.</p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/셔틀랜드_쉽독.jpg" alt="셔틀랜드_쉽독"><p class="dog-explain"><b>셔틀랜드 쉽독</b><br>스코틀랜드 셔틀랜드 섬에서 양치는 용도로 개량한 품종이었다. 지금은 사람을 매우 좋아한다. 지능 순위는 6위다. 가족을 향한 사랑이 강해 가끔은 다른사람을 의심한다. 이중모로 속털은 부드럽고 매우 촘촘히 몸을 뒤덮고 있는데 추운 지방에서 살아가는데 중요한 역할을 한다.</p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/웰시코기.jpg" alt="웰시코기"><p class="dog-explain"><b>웰시코기</b><br>웨일스 지역 원산의 목양견으로 짧은 다리 덕분에 점프력은 떨어지지만 그 파닥파닥으로 귀엽다. 성격은 우선 극단적으로 말한다면 겁대가리가 없다. 상당히 적극적이고 호기심이 많은 편이고 지능이 높고 애교도 많은 데다 어린이에 대한 친밀도가 특히 높다. 충성심또한 전 견종 통틀어 최상위권.</p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/불도그.jpg" alt="불도그"><p class="dog-explain"><b>불도그</b><br>영국의 국견이다. 머리가 크고, 아래턱이 위로 올라가 있으며, 안면부의 폭이 넓다. 이마는 평평하며, 주름이 있고, 주둥이는 매우 짧다. 단두종이라 잠 잘 때 코를 심하게 곤다. 흥분하면 턱을 쓰고 싶어하는 본능이 있어 어떻게든 물어야 직성이 풀리는 것이 특징이다. 투견이 원래 목적이여서 그렇다.</p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/핏_불_테리어.jpg" alt="핏_불_테리어"><p class="dog-explain"><b>핏 불 테리어</b><br>19세기 중반 영국에서 투견을 목적으로 테리어의 힘과 불독의 지구력을 얻기 위한 목적으로 만들어진 종이다. 그러나 현재는 영국에서 판매와 개인의 소유가 금지된 견종이다. 세상에서 제일 위험한 견종중 하나이다. 미국에서 제일 사람을 많이 죽인 견종 1위라고 한다.우리모두 조심하자.</p></div>
+                        </td>
+                </tr>
+                    
+                <tr><th colspan="2">러시아</th></tr>
+                    <tr>
+                        <td>
+                        <img class="country-flag" src="국기/러시아.png" alt="러시아">
+                    </td>
+                    <td>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/사모예드.jpg" alt="사모예드"><p class="dog-explain"><b>사모예드</b><br>시베리아 툰드라 지방에서 생활하던 사모예드족이 기르던 개로, 사역견으로써 사냥, 썰매 등 척박한 환경에서 각종 노동을 거드는 개였다. 도둑이 들면 그 도둑이랑도 놀아줄 정도로 경계심이 적다. 성인인 주인뿐 아니라 아기들이랑도 놀아주는 긍정적인 에너지가 넘친다. 단점: 극악무도한 털빠짐</p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/시베리안_허스키.jpg" alt="시베리안_허스키"><p class="dog-explain"><b>시베리안_허스키</b><br>시베리아에서 동북쪽 끝 추코트카가 유래고 알래스칸 말라뮤트와 닮아보이나 허스키는 더 날렵한 늑대같은 생김새이다. 단 체구는 훨씬 더 작다. 털은 2중구조. 굉장히 많은 털이 빠진다. 영리하고 기본적으로 단체생활에 익숙하다. 하지만 가만있지를 못해 바깥에서 길러야한다.</p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/오브차카.jpg" alt="오브차카"><p class="dog-explain"><b>오브차카</b><br>초대형 견종 원산지는 코카서스 지역으로 Овчарка는 양치기견을 의미하는 말로 오브차카들은 양떼를 침입자로부터 지켜내기 위해 길러져 왔다. 또한 대형곰 사냥 시 냄새 파악과 추적을 위해 만든 사냥개이며 견주에게 안전하다 생각하지 않으면 공격하니 충분히 확인해주고 다가가자.</p></div>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/보르조이.jpg" alt="보르조이"><p class="dog-explain"><b>보르조이</b><br>초대형 견으로 러시아의 국견이다. 생후 1년까지는 급성장하는 편이며 초기의 용도는 늑대 사냥이였다. 그로 인해 만큼 활발하며 많은 운동량과 복종 훈련이 필요하다. 러시아어로 민첩하다는 뜻의 보르조이란 이름처럼 주인의 행동이나 표정을 관찰할 줄 알며 신경이 세밀하다. 그리고 멋있다.</p></div>
+                    </td>
+                </tr>
+                    
+                <tr><th colspan="2">크로아티아</th></tr>
+                    <tr>
+                        <td>
+                        <img class="country-flag" src="국기/크로아티아.png" alt="크로아티아">
+                    </td>
+                    <td>
+                        <div class="dog-TMI"><img class="dog-picture" src="강아지/달마시안.jpg" alt="달마시안"><p class="dog-explain"><b>달마시안</b><br>원산지는 동유럽 발칸반도 근처 달마티아 지방 가장 큰 문제는 성격이 굉장히 거칠다는 점. 본래 마차를 지키던 경호견이기 때문. 활동성이 높고 성격이 거칠어 교육하지 않으면 사고칠 확률이 높은데, 배타성도 강하고 고집도 세다보니 교육이 쉽지가 않다.서양에선 소방관의 개로써의 이미지가 크다.</p></div>
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="continent" id="Asia">
+            <div class="continent-title" id="Europe-title"><h1 class="continent-title-p">Asia</h1>
+            <table border="1" id="Asia-dog">
+                <tr><th colspan="2">한국</th></tr>
+                <tr><td><img class="country-flag" src="국기/한국.png" alt="한국"></td>
+                <td>
+                    <div class="dog-TMI"><img class="dog-picture" src="강아지/진돗개.jpg" alt="진돗개"><p class="dog-explain"><b>진돗개</b><br>원 서식지는 전남 진도군 일대이다. 천연기념물 제53호지만, 모든 진돗개가 전부 다 천연기념물로 지정이 되는 것이 아니라, 진도군 내에서 심사를 받아 통과되면 진도개라는 이름으로 천연기념물로서 보호를 받게 된다. 집에서 볼일을 보지 않기 때문에 청결함의 대명사 주인에게 충성심이 강하다.</p></div>
+                    <div class="dog-TMI"><img class="dog-picture" src="강아지/풍산개.jpg" alt="풍산개"><p class="dog-explain"><b>풍산개</b><br>원서식지는 함경남도 풍산군으로 외형은 진돗개와 닮았으나 덩치가 좀더 크고 북슬한 느낌이 든다.  평양 남북정상회담에서 김정은이 문재인 대통령에게 풍산개 한쌍인 송강(17년 11월생, 수컷), 곰이(17년 3월생, 암컷)를 선물하였다.추위와 질병에 대한 저항력이 높고 수렵견으로 활약한다. </p></div>
+                    <div class="dog-TMI"><img class="dog-picture" src="강아지/삽살개.jpg" alt="삽살개"><p class="dog-explain"><b>삽살개</b><br>천연기념물 제368호로 동남 지방에서 서식하던 것이 고려, 조선 시기에 전국으로 퍼진 것으로 알려져 있다. 털이 긴 개라는 의미로 더풀개, 더펄개라고도 한다. 잡귀를 쫓는 퇴마견으로도 알려져 있다. 구전되는 설화에 따르면 청삽사리를 가리켜 '사자방'이라 불렀는데 이는 사자 새끼를 뜻한다고 한다.</p></div>
+                    <div class="dog-TMI"><img class="dog-picture" src="강아지/동경이.jpg" alt="동경이"><p class="dog-explain"><b>동경이</b><br>천연기념물 540호인 경상북도 경주시 지역에서 유래해 많이 사육된 한국 토종견으로 현지 방언으로는 댕댕이 혹은 댕견이라고도 불린다. 선천적으로 꼬리가 퇴화되어 몽똑하거나 없고 진돗개 보다 크기가 조금 작다. 2018년 1월 1일 기준 487마리가 있어 일반가정에서는 보기 힘든 견종이다.</p></div>
+                </td>
+                </tr>
+
+                <tr><th colspan="2">일본</th></tr>
+                <tr><td><img class="country-flag" src="국기/일본.png" alt="일본"></td>
+                <td>
+                    <div class="dog-TMI"><img class="dog-picture" src="시바견 밈1.jpg" alt="시바견"><p class="dog-explain"><b>시바견</b><br>짤로 많이 나오는 견 일본의 견주중 80%정도가 키우고있다. 스피츠 그룹에 속하는 견종이다. 독립적이고 배타적인 성격으로 자기 영역이 확실하며 주도성(고집)이 강하다. 그래서 주인 말을 듣지 않아 속썩이기 일쑤다.</p></div>
+                    <div class="dog-TMI"><img class="dog-picture" src="강아지/재패니즈_스피츠.jpg" alt="재패니즈_스피츠"><p class="dog-explain"><b>재패니즈 스피츠</b><br> 늑대 중에서 인간에게 가장 먼저 우호적이었을 존재의 후손으로 쫑긋 선 귀, 꼴랑 말려 올라간 꼬리, 그리고 V자형 얼굴이 특징. 털이 가는 편이라 잘 날리고  훈련이 어렵고 짖음, 입질 등 본능을 고치지 않으려는 고집이 세다. 가구, 벽지, 소파, 전선 등을 물어뜯어 망가뜨리는 것을 엄청 좋아한다.</p></div>
+                </td>
+                </tr>
+
+                <tr><th colspan="2">중국</th></tr>
+                <tr><td><img class="country-flag" src="국기/중국.png" alt="중국"></td>
+                <td>
+                    <div class="dog-TMI"><img class="dog-picture" src="강아지/시추.jpg" alt="시추"><p class="dog-explain"><b>시추</b><br>예전 중국에서 사자구(獅子狗/狮子狗, 스쯔거우), 즉 사자개로 불렸었다. 중국 황실을 위해 티벳의 라사압소를 들여와 페키니즈와 교배시켜 탄생한 설있다. 성격은 가장 온순한 편이다. 견종 중에서 가장 공격성이 낮으며,덜 짖는 견종으로 알려져 있다. 장모종치고 털이 잘 안 빠진다.</p></div>
+                    <div class="dog-TMI"><img class="dog-picture" src="강아지/차우차우.jpg" alt="차우차우"><p class="dog-explain"><b>차우차우</b><br>중국에서는 털북숭이 사자개라는 의미의 '숭스취안(松狮犬)'으로 부른다. 오래된 견종이다. 독립성이 강하고 대담하고 차분하여 헛짖음을 하는 일이 드물다. 친화력이 없는 편으로 낯선 사람에게는 경계심을 보이며 냉담하다. 반면에 주인에게는 절대적인 충성을 보인다.</p></div>
+                    <div class="dog-TMI"><img class="dog-picture" src="강아지/페키니즈.jpg" alt="페키니즈"><p class="dog-explain"><b>페키니즈</b><br>'베이징의 개'란 뜻으로 중국 현지에서는 '징빠(京巴)'라 불린다. 비슷한 크기의 개들보다 다리가 매우 짧은 편이다. 때문에 앞 갈기 털은 땅에 질질 끌린다. 페키니즈는 강아지 시절 극강의 귀여움을 자랑한다. 지능이 좋지 않고 식탐이 강하며 극도로 폭염에 취약하다.</p></div>
+                    <div class="dog-TMI"><img class="dog-picture" src="강아지/퍼그.jpg" alt="퍼그"><p class="dog-explain"><b>퍼그</b><br>송나라 시대 황제가 키우는 군견이다. 실크로드로 영국으로 갔고 당시 유럽인들은 불독 같은 못생긴 개를 키우는게 유행이었고, 퍼그를 못생긴 개로 개량시켰다. 느긋하고 순하지만 나름대로 고집이 있다.</p></div>
+                    <div class="dog-TMI"><img class="dog-picture" src="강아지/샤페이.jpg" alt="샤페이"><p class="dog-explain"><b>샤페이</b><br>외모의 특징이라면 쭈글쭈글하며 쭉쭉 늘어나는 주름이다. 털을 잘 안 날리는 단모종이지만 단모종 특성상 털빠짐이 심하며 더위, 추위에 약하다. 성격은 주인을 잘 따르고 헛짖음이 없으며 침착하며 무심한듯 애교를 피운다. 옛날에는 투견, 보신탕에도 쓰였다고 한다.</p></div>
+                    <div class="dog-TMI"><img class="dog-picture" src="강아지/티베탄_마스티프.jpg" alt="티베탄 마스티프"><p class="dog-explain"><b>티베탄 마스티프</b><br>장오견, 혹은 사자개라고도 한다. 마스티프 형의 대형 견종들의 조상으로 몸집도 무시무시하게 크고 외모도 무시무시하고 성격도 무시무시하지만 더 무시무시한 것은 장난 아니게 비싼 개로 유명하다. 비싼 이유중 하나는 번식시키기가 거의 팬더급으로 어렵기 때문</p></div>
+                    <div class="dog-TMI"><img class="dog-picture" src="강아지/라사압소.jpg" alt="라사압소"><p class="dog-explain"><b>라사압소</b><br>티베트의 중심지인 라싸(Lassa)에서 왔고 액운을 없애는 신성한 개로 여겼다. 장모종에 털은 뻣뻣하며 성격은 쾌활한 편, 자존심과 도도함, 경계심을 가지고 있다 낯선 사람에게는 그다지 호의적이지 않다. 대신 일단 자기 가족이라는 것을 인식하면 무척 소중히 여긴다.</p></div>
+                </td>
+                </tr>
+
+                <tr><th colspan="2">아프가니스탄</th></tr>
+                <tr><td><img class="country-flag" src="국기/아프가니스탄.png" alt="아프가니스탄"></td>
+                <td>
+                    <div class="dog-TMI"><img class="dog-picture" src="강아지/아프간_하운드.jpg" alt="아프간_하운드"><p class="dog-explain"><b>아프간 하운드</b><br>지구상에서 오래된 견종 중 하나로 사냥개로 널리 쓰였지만 아름다운 외모가 주목받은 이후로는 애완용으로 개량되어 많이 온순해졌다. 부유층이 매우 아끼던 개였다. 정성도 많이 들어가고 제법 큰 개라 식비가 많이 드는 등 여러모로 신경쓸 게 많다. 하지만 지능은 꼴지인 겉만 화려한 견이다.</p></div>
+                </td>
+                </tr>
+
+                <tr><th colspan="2">터키</th></tr>
+                <tr><td><img class="country-flag" src="국기/터키.png" alt="터키"></td>
+                <td>
+                    <div class="dog-TMI"><img class="dog-picture" src="강아지/캉갈도그.jpg" alt="캉갈도그"><p class="dog-explain"><b>캉갈도그</b><br>터키의 국견. 터키 동부 중앙에 위치한 시바스(Sivas) 지방에서 유목민들이 늑대로부터 양을 지키고자 키워온 개 가족에게는 절대적으로 순한 양이라서 주인이나 주인 식구들에게 무척 순하다. 하지만 목양견들이 그렇듯 외부인에 대한 경계심은 많은 편이다.</p></div>
+                </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+                 <div class="continent" id="America">
+                      <div class="continent-title" id="America-title"><h1 class="continent-title-p">America</h1>
+                            <table border="1" id="America-dog">
+                                <tr><th colspan="2">U.S.A</th></tr>
+                                <tr><td><img class="country-flag" src="국기/USA.png" alt="U.S.A"></td>
+                                <td>
+                                    <div class="dog-TMI"><img class="dog-picture" src="강아지/보스턴_테리어.jpg" alt="보스턴_테리어"><p class="dog-explain"><b>보스턴 테리어</b><br>보스턴 테리어는 미국 원산의 품종이며 불도그와 불테리어를 교배하여 투견으로 만들어졌으나 후에 프렌치 불도그와 교배하여 애완용으로 개량되었다. 성격은 영리하지만 예민하며 질투심이 꽤 많다고 한다. 단두종의 특성상 호흡이 곤란하기 때문에 잘 때 코를 많이 고는 견종이다.</p></div>
+                                    <div class="dog-TMI"><img class="dog-picture" src="강아지/아메리칸_불리.jpg" alt="아메리칸_불리"><p class="dog-explain"><b>아메리칸 불리</b><br>아메리칸 핏 불 테리어'와 '아메리칸 스태퍼드셔 테리어'를 선택교배시켜서 개량해낸 견종이다. 두 견종의 사나운 성격을 순화시키고 떡대를 더욱 크게 만드는 방향으로 개량되었다. 덕분에 핏불보다 더 세보이지만 투견으로는 쓰이지는 않는다. 가격은 상당히 비싼 고가의 견종.</p></div>
+                                    <div class="dog-TMI"><img class="dog-picture" src="강아지/알래스칸_맬러뮤트.jpg" alt="알래스칸_맬러뮤트"><p class="dog-explain"><b>알래스칸 맬러뮤트</b><br>썰매를 끄는 개. 스피츠 계통으로 이누이트 중 마흘레뭇 족(Mahlemut)이 처음부터 이 목적으로 개량했기 때문에 이런 이름이 붙었다. 허스키랑 다르게 대형견이다.장난을 좋아하면서도 큰 말썽은 잘 안 부리는 편. 잘 짖는 편도 아니고 낯선 개와 마주쳤을 때 그냥 멀뚱이 쳐다보고 있는다 한다.</p></div>
+                                    <div class="dog-TMI"><img class="dog-picture" src="강아지/아메리칸_코커_스패니얼.jpg" alt="아메리칸_코커_스패니얼"><p class="dog-explain"><b>아메리칸 코커 스패니얼</b><br>새 사냥견으로 3대 지랄견이다. 한줄로 표현하자면 끝을 모르는 식탐과, 뒤돌아서면 잊어주는 쿨함이 매력. 길러본 사람들의 평가로는 "뇌까지 근육", "내 몸에서 사리가 나와요" 등, 활달함이 지나쳐 아주 재앙급이다. 말도 안 듣고, 교육도 힘겹다. 그나마 지구력이 떨어져 자주 놀면 덜한다.</p></div>
+                                    </td>
+                                </tr>
+                
+                                <tr><th colspan="2">캐나다</th></tr>
+                                <tr><td><img class="country-flag" src="국기/캐나다.png" alt="캐나다"></td>
+                                <td>
+                                    <div class="dog-TMI"><img class="dog-picture" src="강아지/뉴퍼틀랜드.jpg" alt="뉴퍼틀랜드"><p class="dog-explain"><b>뉴퍼틀랜드</b><br>마스티프 계통의 개와 뉴펀들랜드 토착견을 교배시켜 생겨났을 것으로 추정되는 초대형견으로 인명구조견으로도 많이 사용된다. 발가락 사이에 물갈퀴가 있어서 수영을 잘하기 때문에 수중 인명 구조견으로 쓰인다.
+                                        </p></div>
+                                    <div class="dog-TMI"><img class="dog-picture" src="강아지/래브라도_리트리버.jpg" alt="래브라도_리트리버"><p class="dog-explain"><b>래브라도 리트리버</b><br>뉴펀들랜드 종의 개량형으로 본디 오리사냥에 자주 쓰여 수영을 매우 잘한다. 지능순위 7위이며, 유난스럽지 않으며 주인의 기분을 잘 살핀다. 골든 리트리버에 비해 털이 짧고 비교적 경계심이 많다. 경호, 조난자 구조, 안내견, 마약탐지견, 폭발물 탐지견, 수색견으로 활동한다.</p></div>
+                                    </td>
+                                </tr>
+                
+                                <tr><th colspan="2">멕시코</th></tr>
+                                <tr><td><img class="country-flag" src="국기/멕시코.png" alt="멕시코"></td>
+                                <td>
+                                    <div class="dog-TMI"><img class="dog-picture" src="강아지/치와와.jpg" alt="치와와"><p class="dog-explain"><b>치와와</b><br>원래 털이 매끈매끈한 단모종이다. 장모종도 있는데 근래에 포메라니안과 교배하면서 생겼다. 성격이 거칠고 공격성이 맹렬하며 고집이 세고 질투심이 많으며 작은 체구에도 불구하고 겁이 없는 견종이다. 주인에 복종하지 않으려는 성향이 강하기 때문에 훈련이 어려운 견종이다. 지능은 낮은 편이다.</p></div>
+                                    </td>
+                                </tr>
+                
+                                <tr><th colspan="2">쿠바</th></tr>
+                                <tr><td><img class="country-flag" src="국기/쿠바.png" alt="쿠바"></td>
+                                <td>
+                                    <div class="dog-TMI"><img class="dog-picture" src="강아지/하바니즈.jpg" alt="하바니즈"><p class="dog-explain"><b>하바니즈</b><br>쿠바의 국견으로 빅토리아 여왕이 기르는 견종으로 특정인에 대한 충성보다는 사람 자체를 좋아하는 견이다. 또한 별명이 찍찍이 개(velcro dog)인만큼 사람에게 들러붙고 사회성이 아주 아주 높아 혼자서 지내는 것을 극도로 힘들어하므로, 혼자 사는 직장인에게는 적합하지 않다.</p></div>
+                                    </td>
+                                </tr>
+
+                                </tr>
+                                <tr><th colspan="2">아르헨티나</th></tr>
+                                <tr><td><img class="country-flag" src="국기/아르헨티나.png" alt="아르헨티나"></td>
+                                <td>
+                                    <div class="dog-TMI"><img class="dog-picture" src="강아지/도고_아르헨티노.jpg" alt="도고 아르헨티노"><p class="dog-explain"><b>도고 아르헨티노</b><br>사냥개의 일종으로 페커리, 멧돼지나 미주대륙 한정으로 퓨마를 사냥하기 위해 만들어진 빅 게임 헌팅독이다. 맹견이기 때문에 주인이 없을 경우 괜히 건드리지 않는 것이 좋다 위험한 정도는 로트와일러 정도로 매우 위험하다.  영국을 포함한 몇몇 나라에서는 반입이 금지된 품종이기도 하다.</p></div>
+                                    </td>
+                                </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="continent" id="Austrailia">
+            <div class="continent-title" id="Austrailia-title"><h1 class="continent-title-p">Austrailia</h1>
+            <table border="1" id="Austrailia-dog">
+                <tr><th colspan="2">호주</th></tr>
+                <tr><td><img class="country-flag" src="국기/호주.png" alt="호주"></td>
+                <td>
+                    <div class="dog-TMI"><img class="dog-picture" src="강아지/실키_테리어.jpg" alt="실키_테리어"><p class="dog-explain"><b>실키 테리어</b><br>요크셔 테리어와 아주 비슷하게 생긴 견종 실제로 친척뻘 성격의 경우 요크셔 테리어와 매우 흡사하지만, 요크셔 테리어보다 조금 더 사냥개 특유의 본능이 강하다고 알려져 있다. 국내에서는 순혈을 찾아보기 힘들다.</p></div>
+                    <div class="dog-TMI"><img class="dog-picture" src="강아지/딩고.jpg" alt="딩고"><p class="dog-explain"><b>딩고</b><br>들개로 지금은 야생동물이다. 집에서 기르는 개를 야생에 풀어주면서 탄생했다. 오스트레일리아의 야생에서는 최상위 포식자 중 하나이며 때로는 인간을 습격하기도 한다. 본성은 개라서 강아지 때부터 기르면 보통 개와 똑같이 기를 수 있다고 한다. </p></div>
+                </td>
+                </tr>
+</table>
+</div>
+</div>
+<div class="continent" id="Africa">
+    <div class="continent-title" id="Africa-title"><h1 class="continent-title-p">Africa</h1>
+    <table border="1" id="Africa-dog">
+        <tr><th colspan="2">마다가스카르</th></tr>
+        <tr><td><img class="country-flag" src="국기/마다가스카르.png" alt="마다가스카르"></td>
+        <td>
+            <div class="dog-TMI"><img class="dog-picture" src="강아지/꼬똥_드_툴레아.jpg" alt="꼬똥_드_툴레아"><p class="dog-explain"><b>꼬 똥드 툴레아</b><br>마다가스카르 섬의 남서부에 위치한 항구도시 '톨리아라(Toliara)'에서 유래하였다. 특징은 기름기 없는 매우 건조한 털은 솜처럼 부드럽고 포근하며 털빠짐이 적고 알러지 유발요소가 적으며 개 냄새가 심하지 않다. 건강체질로 잔병치레가 적다. 눈치가 빠르고 영리하며 헛짖음이 적고 성격이 온순하다.</p></div>
+            </td>
+        </tr>
+        <tr><th colspan="2">이집트</th></tr>
+        <tr><td><img class="country-flag" src="국기/이집트.png" alt="이집트"></td>
+        <td>
+           <div class="dog-TMI"><img class="dog-picture" src="강아지/살루키.jpg" alt="살루키"><p class="dog-explain"><b>살루키</b><br>기원이 오래된 개로 기원전 7,000~6,000년 수메르 유적에서도 발견될 정도이다. 또한 이집트의 왕도 살루키를 아껴 왕이 죽으면 함께 미라가 되기도 하였다. 사막 등의 어려운 조건에서도 잘 살 수 있으며 추위에도 강하다. 주인에 대하여 애정이 깊고 집을 지키는 개로서 이용된다.</p></div>    
+        </td>
+        </tr>
+</table>
+</div>
+</div>
+    </div>
+        </section>
+</div>
+<footer><p>HTML5 Programming for term project topic is about dog and cat</p></footer>
+</div>
+<!-- 오른쪽 고정바 부분 -->
+<div class="right">
+    <ul class="right-pull-menu">
+        
+                    <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="#America">아메리카</a></span></li>
+                    <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="#Asia">아시아</a></span></li>
+                    <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="#Africa">아프리카</a></span></li>
+                    <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="#Europe">유럽</a></span></li>
+                    <li class="nav-pull-menu-item"><span class="nav-pull-menu-item-title"><a href="#Austrailia">오세아니아</a></span></li>
+                    
+    </ul>
+</div>   
+</body>
+</html>
+    
+</body>
+</html>
